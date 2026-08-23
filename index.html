@@ -75,13 +75,12 @@
         </div>
     </div>
 
-    <!-- 2. MAIN NAVBAR WITH EXACT OFFICIAL LOGO -->
+    <!-- 2. MAIN NAVBAR WITH OFFICIAL LOGO -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             
             <!-- OFFICIAL SPACE INNOVARE LOGO -->
             <a href="#" class="flex items-center gap-2 sm:gap-3 group">
-                <!-- Exact Stylized Orange House Icon -->
                 <div class="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0">
                     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-brand-orange transform group-hover:scale-105 transition duration-300">
                         <path d="M12 90V40L50 8L88 40" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
@@ -89,7 +88,6 @@
                     </svg>
                 </div>
                 
-                <!-- Logo Typography (Exact Match to Image) -->
                 <div class="flex flex-col justify-center font-logo">
                     <span class="text-xs sm:text-sm font-medium tracking-[0.38em] text-slate-800 uppercase leading-none">
                         SPACE
@@ -114,7 +112,7 @@
 
             <!-- Admin & WhatsApp Buttons -->
             <div class="flex items-center gap-2 sm:gap-3">
-                <button onclick="openAdminModal()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center gap-1.5 border border-slate-300">
+                <button onclick="openAdminModal()" id="nav-admin-btn" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center gap-1.5 border border-slate-300">
                     <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-orange"></i>
                     <span class="hidden sm:inline">Admin View</span>
                 </button>
@@ -128,15 +126,12 @@
         </div>
     </header>
 
-    <!-- 3. HERO SECTION (MOBILE FIRST + OFFICIAL LOGO BRANDING) -->
+    <!-- 3. HERO SECTION -->
     <section class="relative pt-8 pb-14 sm:py-20 bg-gradient-to-b from-orange-50/40 via-white to-slate-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 
-                <!-- Left Hero Content -->
                 <div class="lg:col-span-7 text-center lg:text-left">
-                    
-                    <!-- Location Pill -->
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-orange/30 shadow-sm text-xs font-bold text-brand-orangeDark mb-5">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                         <span>अब Bharatpur, Jaipur व Noida में प्रीमियम सॉल्यूशन्स</span>
@@ -151,7 +146,6 @@
                         2D नक्शा, 3D एलिवेशन, लक्ज़री इंटीरियर, संपूर्ण वास्तु अनुसार प्लानिंग, टर्नकी कंस्ट्रक्शन और <strong>नगर पालिका अप्रूवल ड्रॉइंग्स</strong>।
                     </p>
 
-                    <!-- Mobile Action Buttons -->
                     <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                         <a href="https://wa.me/919319181300?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20my%20home%20design" target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2.5 transition">
                             <i data-lucide="phone-call" class="w-4 h-4 text-brand-orange"></i>
@@ -164,7 +158,6 @@
                     </div>
                 </div>
 
-                <!-- Right Hero Image Showcase -->
                 <div class="lg:col-span-5">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 bg-white p-2.5">
                         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Space INNOVARE 3D Elevation" class="w-full h-64 sm:h-80 object-cover rounded-2xl">
@@ -206,7 +199,6 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            <!-- Service 1 -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
                 <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
                     <i data-lucide="layers" class="w-6 h-6"></i>
@@ -217,7 +209,6 @@
                 </p>
             </div>
 
-            <!-- Service 2 -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
                 <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
                     <i data-lucide="box" class="w-6 h-6"></i>
@@ -228,7 +219,6 @@
                 </p>
             </div>
 
-            <!-- Service 3 -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
                 <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
                     <i data-lucide="armchair" class="w-6 h-6"></i>
@@ -239,7 +229,6 @@
                 </p>
             </div>
 
-            <!-- Service 4 -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
                 <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
                     <i data-lucide="compass" class="w-6 h-6"></i>
@@ -250,7 +239,6 @@
                 </p>
             </div>
 
-            <!-- Service 5 -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
                 <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
                     <i data-lucide="hard-hat" class="w-6 h-6"></i>
@@ -261,7 +249,6 @@
                 </p>
             </div>
 
-            <!-- Service 6 -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
                 <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
                     <i data-lucide="file-text" class="w-6 h-6"></i>
@@ -281,12 +268,13 @@
                 <div>
                     <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase">Real Execution</span>
                     <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">हमारे रियल प्रोजेक्ट्स & वीडियो</h2>
+                    <p id="admin-status-indicator" class="text-xs text-slate-500 mt-1"></p>
                 </div>
                 
-                <!-- Quick Mobile Uploader -->
+                <!-- Open Admin Panel -->
                 <button onclick="openAdminModal()" class="px-4 py-2.5 rounded-xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-xs flex items-center gap-2 self-start sm:self-auto shadow-md">
-                    <i data-lucide="camera" class="w-4 h-4 text-brand-orange"></i>
-                    <span>+ फोटो / वीडियो जोड़ें</span>
+                    <i data-lucide="sliders-horizontal" class="w-4 h-4 text-brand-orange"></i>
+                    <span>Manage / Delete Projects</span>
                 </button>
             </div>
 
@@ -314,7 +302,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Bharatpur Head Office -->
             <div class="p-6 rounded-3xl bg-white border-2 border-brand-orange shadow-md relative">
                 <span class="absolute top-4 right-4 px-2.5 py-0.5 bg-brand-orange text-white text-[10px] font-black uppercase rounded-full">Head Studio</span>
                 <div class="w-10 h-10 rounded-xl bg-orange-50 text-brand-orange flex items-center justify-center mb-3">
@@ -328,7 +315,6 @@
                 </div>
             </div>
 
-            <!-- Jaipur Branch -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
                 <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-3">
                     <i data-lucide="building" class="w-5 h-5"></i>
@@ -340,7 +326,6 @@
                 </div>
             </div>
 
-            <!-- Noida Branch -->
             <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
                 <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-3">
                     <i data-lucide="building-2" class="w-5 h-5"></i>
@@ -354,7 +339,7 @@
         </div>
     </section>
 
-    <!-- 7. INSTANT BUDGET ESTIMATOR -->
+    <!-- 7. BUDGET ESTIMATOR -->
     <section id="estimator" class="py-16 bg-brand-dark text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-8">
@@ -382,7 +367,6 @@
                     </div>
                 </div>
 
-                <!-- Result Card -->
                 <div class="p-5 rounded-2xl bg-brand-dark border border-brand-orange/40 text-center space-y-2">
                     <span class="text-[11px] uppercase tracking-widest text-slate-400">अनुमानित प्रोजेक्ट बजट</span>
                     <div id="estimated-cost" class="text-2xl sm:text-3xl font-black text-brand-orange font-logo">
@@ -445,11 +429,10 @@
         </form>
     </section>
 
-    <!-- FOOTER WITH OFFICIAL LOGO -->
+    <!-- FOOTER -->
     <footer class="py-12 bg-brand-dark text-center text-xs text-slate-400 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
             
-            <!-- Logo in Footer -->
             <div class="flex items-center gap-2.5 mb-3">
                 <svg viewBox="0 0 100 100" fill="none" class="w-8 h-8 text-brand-orange">
                     <path d="M12 90V40L50 8L88 40" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
@@ -468,7 +451,7 @@
         </div>
     </footer>
 
-    <!-- STICKY MOBILE BOTTOM ACTION BAR -->
+    <!-- STICKY MOBILE ACTION BAR -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 px-3 flex items-center justify-between gap-2 shadow-2xl">
         <a href="tel:9319181300" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold text-xs flex items-center justify-center gap-1.5 border border-slate-300">
             <i data-lucide="phone-call" class="w-4 h-4 text-brand-orange"></i>
@@ -484,10 +467,11 @@
         </a>
     </div>
 
-    <!-- ADMIN MODAL -->
+    <!-- 10. ADMIN MODAL (WITH DIRECT UPLOAD + DELETE / MANAGE PROJECTS) -->
     <div id="admin-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+        <div class="bg-white rounded-3xl p-6 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             
+            <!-- Auth Step -->
             <div id="admin-auth-box">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-lg font-black font-logo text-slate-900">Admin Login</h3>
@@ -495,60 +479,86 @@
                 </div>
                 <form onsubmit="verifyAdminPasscode(event)" class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">पासकोड ( confidential )</label>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">पासकोड दर्ज करें (Default: 1234)</label>
                         <input type="password" id="admin-passcode" required placeholder="Enter Passcode..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange">
                     </div>
                     <button type="submit" class="w-full py-3 bg-brand-dark hover:bg-slate-900 text-white font-bold rounded-xl text-xs uppercase tracking-wider">
-                        Login to Uploader
+                        Login & Manage Gallery
                     </button>
                 </form>
             </div>
 
-            <div id="admin-upload-box" class="hidden">
+            <!-- Admin Dashboard (After Login) -->
+            <div id="admin-dashboard-box" class="hidden">
                 <div class="flex justify-between items-center mb-4 border-b pb-3">
                     <div>
-                        <h3 class="text-lg font-black font-logo text-slate-900">Upload Project</h3>
-                        <span class="text-[10px] text-emerald-600 font-bold">● Live Mobile Admin Mode</span>
+                        <h3 class="text-lg font-black font-logo text-slate-900">Admin Control Panel</h3>
+                        <span class="text-[10px] text-emerald-600 font-bold">● Logged in as Owner</span>
                     </div>
                     <button onclick="closeAdminModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
                 </div>
 
-                <form onsubmit="handleProjectUpload(event)" class="space-y-3.5">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">प्रोजेक्ट टाइटल</label>
-                        <input type="text" id="upload-title" required placeholder="उदा. Luxury Interior Villa Bharatpur" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
+                <!-- Admin Tabs -->
+                <div class="flex gap-2 mb-5 border-b pb-3">
+                    <button onclick="switchAdminTab('upload')" id="tab-btn-upload" class="flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white">
+                        + नया अपलोड करें
+                    </button>
+                    <button onclick="switchAdminTab('manage')" id="tab-btn-manage" class="flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border">
+                        🗑️ प्रोजेक्ट्स हटाएं (Delete)
+                    </button>
+                </div>
+
+                <!-- Tab 1: Upload Form -->
+                <div id="admin-upload-view">
+                    <form onsubmit="handleProjectUpload(event)" class="space-y-3.5">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">प्रोजेक्ट टाइटल</label>
+                            <input type="text" id="upload-title" required placeholder="उदा. Luxury Interior Villa, Bharatpur" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">केटेगरी</label>
+                            <select id="upload-cat" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange font-semibold">
+                                <option value="interior">लक्ज़री इंटीरियर (Interior)</option>
+                                <option value="woodwork">डोर्स & वॉर्डरोब (Woodwork)</option>
+                                <option value="3d">3D एलिवेशन (3D Elevation)</option>
+                                <option value="video">वीडियो (Video Walkthrough)</option>
+                            </select>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-orange-50/70 border-2 border-dashed border-brand-orange/40 text-center">
+                            <label class="block text-xs font-bold text-brand-orangeDark uppercase mb-1">📱 फोन/कंप्यूटर से फोटो चुनें:</label>
+                            <input type="file" id="upload-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-brand-dark file:text-white">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">या Image / YouTube URL</label>
+                            <input type="url" id="upload-url" placeholder="https://..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">विवरण</label>
+                            <input type="text" id="upload-desc" placeholder="उदा. Work done by Space INNOVARE" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
+                        </div>
+
+                        <div class="pt-2 flex gap-2">
+                            <button type="button" onclick="closeAdminModal()" class="flex-1 py-2.5 rounded-xl bg-slate-100 text-slate-700 text-xs font-bold">Cancel</button>
+                            <button type="submit" class="flex-1 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white text-xs font-bold shadow-md">Upload & Live</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tab 2: Manage & Delete Projects List -->
+                <div id="admin-manage-view" class="hidden">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold text-slate-600">कुल लाइव प्रोजेक्ट्स: <span id="total-projects-count" class="text-brand-orange font-bold">0</span></span>
+                        <button onclick="resetToDefaultProjects()" class="text-[11px] text-red-600 underline font-semibold">डिफ़ॉल्ट रीसेट करें</button>
                     </div>
 
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">केटेगरी</label>
-                        <select id="upload-cat" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange font-semibold">
-                            <option value="interior">लक्ज़री इंटीरियर (Interior)</option>
-                            <option value="woodwork">डोर्स & वॉर्डरोब (Woodwork)</option>
-                            <option value="3d">3D एलिवेशन (3D Elevation)</option>
-                            <option value="video">वीडियो (Video Walkthrough)</option>
-                        </select>
+                    <div id="admin-projects-list" class="space-y-2.5 max-h-80 overflow-y-auto pr-1">
+                        <!-- Projects list with delete buttons generated by JS -->
                     </div>
-
-                    <div class="p-3.5 rounded-2xl bg-orange-50/70 border-2 border-dashed border-brand-orange/40 text-center">
-                        <label class="block text-xs font-bold text-brand-orangeDark uppercase mb-1">📱 फोन से फोटो सेलेक्ट करें:</label>
-                        <input type="file" id="upload-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-brand-dark file:text-white">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">या Image / YouTube URL डालें</label>
-                        <input type="url" id="upload-url" placeholder="https://..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">विवरण (Location / Details)</label>
-                        <input type="text" id="upload-desc" placeholder="उदा. Execution by Space INNOVARE" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
-                    </div>
-
-                    <div class="pt-2 flex gap-2">
-                        <button type="button" onclick="closeAdminModal()" class="flex-1 py-2.5 rounded-xl bg-slate-100 text-slate-700 text-xs font-bold">Cancel</button>
-                        <button type="submit" class="flex-1 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white text-xs font-bold shadow-md">Upload & Live</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -557,8 +567,8 @@
     <script>
         lucide.createIcons();
 
-        // Initial Real Projects
-        const initialProjects = [
+        // 1. Initial Real Projects
+        const defaultProjects = [
             {
                 id: 1,
                 title: "Royal Italian Marble Living Room",
@@ -601,7 +611,7 @@
             }
         ];
 
-        let liveProjects = JSON.parse(localStorage.getItem('space_innovare_final_projects')) || initialProjects;
+        let liveProjects = JSON.parse(localStorage.getItem('space_innovare_final_v4')) || defaultProjects;
 
         function renderGallery(filter = 'all') {
             const grid = document.getElementById('gallery-grid');
@@ -609,9 +619,20 @@
 
             const filtered = filter === 'all' ? liveProjects : liveProjects.filter(p => p.cat === filter);
 
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-3 text-center py-12 text-slate-400 text-sm">इस केटेगरी में कोई प्रोजेक्ट नहीं है।</div>`;
+                return;
+            }
+
             filtered.forEach((p) => {
                 const card = document.createElement('div');
-                card.className = "rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300";
+                card.className = "rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 relative group";
+
+                let deleteOnCard = isAdminLoggedIn ? `
+                    <button onclick="deleteProject(${p.id})" class="absolute top-3 left-3 z-20 px-2.5 py-1 bg-red-600 text-white rounded-lg text-[11px] font-bold shadow-lg flex items-center gap-1 hover:bg-red-700">
+                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Delete
+                    </button>
+                ` : '';
 
                 let mediaHtml = '';
                 if (p.type === 'video') {
@@ -623,6 +644,7 @@
                 } else {
                     mediaHtml = `
                         <div class="overflow-hidden h-56 relative">
+                            ${deleteOnCard}
                             <img src="${p.url}" alt="${p.title}" class="w-full h-full object-cover">
                             <div class="absolute top-3 right-3 px-2.5 py-0.5 bg-brand-dark/85 text-brand-orange text-[10px] font-extrabold uppercase rounded-full backdrop-blur-sm">
                                 ${p.cat.toUpperCase()}
@@ -651,33 +673,106 @@
             renderGallery(cat);
         }
 
-        // Admin Auth & Upload
+        // 2. Admin Modal Logic
         let isAdminLoggedIn = false;
+
         function openAdminModal() {
             document.getElementById('admin-modal').classList.remove('hidden');
             if (isAdminLoggedIn) {
                 document.getElementById('admin-auth-box').classList.add('hidden');
-                document.getElementById('admin-upload-box').classList.remove('hidden');
+                document.getElementById('admin-dashboard-box').classList.remove('hidden');
+                renderAdminManageList();
             } else {
                 document.getElementById('admin-auth-box').classList.remove('hidden');
-                document.getElementById('admin-upload-box').classList.add('hidden');
-            }
-        }
-        function closeAdminModal() {
-            document.getElementById('admin-modal').classList.add('hidden');
-        }
-        function verifyAdminPasscode(e) {
-            e.preventDefault();
-            const pass = document.getElementById('admin-passcode').value;
-            if (pass === "djbhai") {
-                isAdminLoggedIn = true;
-                document.getElementById('admin-auth-box').classList.add('hidden');
-                document.getElementById('admin-upload-box').classList.remove('hidden');
-            } else {
-                alert('गलत पासकोड! (Default: confidential)');
+                document.getElementById('admin-dashboard-box').classList.add('hidden');
             }
         }
 
+        function closeAdminModal() {
+            document.getElementById('admin-modal').classList.add('hidden');
+        }
+
+        function verifyAdminPasscode(e) {
+            e.preventDefault();
+            const pass = document.getElementById('admin-passcode').value;
+            if (pass === "1234") {
+                isAdminLoggedIn = true;
+                document.getElementById('admin-auth-box').classList.add('hidden');
+                document.getElementById('admin-dashboard-box').classList.remove('hidden');
+                document.getElementById('admin-status-indicator').innerText = "● Admin Mode Active: आप सीधे फोटो पर Delete बटन दबाकर भी हटा सकते हैं।";
+                renderAdminManageList();
+                renderGallery('all');
+            } else {
+                alert('गलत पासकोड! (Default: 1234)');
+            }
+        }
+
+        function switchAdminTab(tab) {
+            if (tab === 'upload') {
+                document.getElementById('admin-upload-view').classList.remove('hidden');
+                document.getElementById('admin-manage-view').classList.add('hidden');
+                document.getElementById('tab-btn-upload').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white";
+                document.getElementById('tab-btn-manage').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border";
+            } else {
+                document.getElementById('admin-upload-view').classList.add('hidden');
+                document.getElementById('admin-manage-view').classList.remove('hidden');
+                document.getElementById('tab-btn-manage').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white";
+                document.getElementById('tab-btn-upload').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border";
+                renderAdminManageList();
+            }
+        }
+
+        // Render List for Management/Delete
+        function renderAdminManageList() {
+            const list = document.getElementById('admin-projects-list');
+            document.getElementById('total-projects-count').innerText = liveProjects.length;
+            list.innerHTML = '';
+
+            liveProjects.forEach(p => {
+                const item = document.createElement('div');
+                item.className = "flex items-center justify-between gap-3 p-2.5 rounded-xl border border-slate-200 bg-slate-50";
+                
+                let thumb = p.type === 'video' ? '📹' : `<img src="${p.url}" class="w-10 h-10 rounded-lg object-cover">`;
+
+                item.innerHTML = `
+                    <div class="flex items-center gap-3 overflow-hidden">
+                        ${thumb}
+                        <div class="truncate">
+                            <div class="text-xs font-bold text-slate-900 truncate">${p.title}</div>
+                            <div class="text-[10px] text-slate-500 uppercase font-semibold">${p.cat}</div>
+                        </div>
+                    </div>
+                    <button onclick="deleteProject(${p.id})" class="px-3 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg text-xs font-bold transition flex items-center gap-1 shrink-0 border border-red-200">
+                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                        <span>Delete</span>
+                    </button>
+                `;
+                list.appendChild(item);
+            });
+            lucide.createIcons();
+        }
+
+        // Delete a project
+        function deleteProject(id) {
+            if (confirm("क्या आप वाकई इस प्रोजेक्ट/फोटो को हटाना चाहते हैं?")) {
+                liveProjects = liveProjects.filter(p => p.id !== id);
+                localStorage.setItem('space_innovare_final_v4', JSON.stringify(liveProjects));
+                renderGallery('all');
+                renderAdminManageList();
+            }
+        }
+
+        // Reset to default
+        function resetToDefaultProjects() {
+            if (confirm("क्या आप शुरुआत की सभी ओरिजिनल फोटोज़ वापस लाना चाहते हैं?")) {
+                liveProjects = [...defaultProjects];
+                localStorage.setItem('space_innovare_final_v4', JSON.stringify(liveProjects));
+                renderGallery('all');
+                renderAdminManageList();
+            }
+        }
+
+        // Upload Project
         function handleProjectUpload(e) {
             e.preventDefault();
             const title = document.getElementById('upload-title').value;
@@ -702,13 +797,13 @@
 
         function saveAndRender(title, cat, type, url, desc) {
             liveProjects.unshift({ id: Date.now(), title, cat, type, url, desc });
-            localStorage.setItem('space_innovare_final_projects', JSON.stringify(liveProjects));
+            localStorage.setItem('space_innovare_final_v4', JSON.stringify(liveProjects));
             renderGallery('all');
             closeAdminModal();
             alert('प्रोजेक्ट सफलतापूर्वक वेबसाइट पर लाइव हो गया!');
         }
 
-        // Estimator
+        // Budget Estimator
         function calculateBudget() {
             const sqft = parseInt(document.getElementById('est-sqft').value);
             const service = document.getElementById('est-service').value;
@@ -725,7 +820,7 @@
             document.getElementById('estimated-cost').innerText = `₹${minCost.toLocaleString('en-IN')} - ₹${maxCost.toLocaleString('en-IN')}`;
         }
 
-        // Contact
+        // Contact to WhatsApp
         function handleContact(e) {
             e.preventDefault();
             const name = document.getElementById('cust-name').value;
@@ -739,7 +834,7 @@
             window.open(`https://wa.me/${phoneTarget}?text=${text}`, '_blank');
         }
 
-        // Init
+        // Initial Execution
         renderGallery('all');
         calculateBudget();
     </script>
