@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space INNOVARE | Crafting Dream Spaces - Architecture & Interior Design Bharatpur</title>
+    <meta name="description" content="Space INNOVARE - Premium Architecture Design, Interior Design, 3D Visualization, and Project Management in Bharatpur (Opp. KFC, Saras Circle).">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#e5c07b',
+                            500: '#d4af37',
+                            600: '#c5a028',
+                        },
+                        dark: {
+                            900: '#0b0f17',
+                            950: '#06080d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f7e09e 0%, #d4af37 50%, #aa820a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 30px -5px rgba(212, 175, 55, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-dark-950 text-slate-200 antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- TOP BAR -->
+    <div class="bg-dark-900 border-b border-slate-800 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-slate-400">
+                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-500"></i> Saras Circle, Opp. KFC, Bharatpur (Raj.)</span>
+                <span class="hidden md:flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-gold-500"></i> Mon - Sat: 10:00 AM - 7:00 PM</span>
+            </div>
+            <a href="tel:9319181300" class="flex items-center gap-1.5 text-gold-400 hover:text-gold-300 font-semibold transition">
+                <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> +91 93191 81300
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 backdrop-blur-lg bg-dark-950/90 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-black font-extrabold text-2xl shadow-lg shadow-gold-500/20 font-cinzel">
+                    SI
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-bold tracking-wider text-white font-cinzel block">SPACE INNOVARE</span>
+                    <span class="text-[10px] uppercase tracking-[0.25em] text-gold-500 font-medium">Crafting Dream Spaces</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-gold-400 transition">Services</a>
+                <a href="#portfolio" class="hover:text-gold-400 transition">Projects & Videos</a>
+                <a href="#estimator" class="hover:text-gold-400 transition">Cost Estimator</a>
+                <a href="#about" class="hover:text-gold-400 transition">About Us</a>
+                <a href="#contact" class="hover:text-gold-400 transition">Contact</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/919319181300?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Architecture/Interior%20Design" target="_blank" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/20 flex items-center gap-2 transition transform hover:scale-105">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Get Free Quote</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" alt="Luxury Architecture" class="w-full h-full object-cover opacity-20 scale-105 transform animate-pulse duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/80 to-transparent"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest mb-6">
+                <span>✦ Premier Architecture & Interior Studio</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white font-cinzel leading-tight tracking-tight">
+                Crafting Spaces That <br>
+                <span class="gold-gradient">Inspire Luxury Living</span>
+            </h1>
+
+            <p class="mt-6 text-base sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                Transforming your vision into reality with world-class <strong>Architecture Design, Luxury Interiors, 3D Elevation & Turnkey Project Supervision</strong> in Bharatpur & NCR.
+            </p>
+
+            <!-- CTAs -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-bold text-sm uppercase tracking-wider shadow-xl shadow-gold-500/25 transition">
+                    Explore Our Work
+                </a>
+                <a href="#estimator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-white font-bold text-sm uppercase tracking-wider transition">
+                    Calculate Design Cost
+                </a>
+            </div>
+
+            <!-- Highlights -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-left border-t border-slate-800/80 pt-10">
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-cinzel">100+</div>
+                    <div class="text-xs text-slate-400 mt-1">Dream Projects Designed</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-cinzel">3D HD</div>
+                    <div class="text-xs text-slate-400 mt-1">Photorealistic Visualization</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-cinzel">100%</div>
+                    <div class="text-xs text-slate-400 mt-1">Site Supervision & Quality</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-cinzel">Vastu</div>
+                    <div class="text-xs text-slate-400 mt-1">Scientific Space Planning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-dark-900/60 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest">Comprehensive Solutions</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-white font-cinzel mt-2">Our Specialized Services</h2>
+                <p class="mt-4 text-slate-400 text-sm sm:text-base">We handle everything from initial conceptual 2D sketches to 3D walk-throughs and complete turnkey site execution.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="p-8 rounded-2xl bg-dark-950 border border-slate-800 hover:border-gold-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-black transition">
+                        <i data-lucide="compass" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-cinzel">Architecture Design</h3>
+                    <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                        Vastu-compliant residential, commercial & institutional building layouts, structural drafting, and municipal approvals.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-8 rounded-2xl bg-dark-950 border border-slate-800 hover:border-gold-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-black transition">
+                        <i data-lucide="armchair" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-cinzel">Interior Design</h3>
+                    <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                        Bespoke luxury interiors for villas, modern apartments, offices, modular kitchens, custom wardrobes, and smart lighting.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-8 rounded-2xl bg-dark-950 border border-slate-800 hover:border-gold-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-black transition">
+                        <i data-lucide="box" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-cinzel">3D Visualization</h3>
+                    <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                        Photorealistic 3D front elevations, interior 3D renders, and cinematic VR walk-throughs before construction starts.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-8 rounded-2xl bg-dark-950 border border-slate-800 hover:border-gold-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-black transition">
+                        <i data-lucide="hard-hat" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-cinzel">Project Management & Supervision</h3>
+                    <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                        Complete on-site civil and finishing supervision, material quality control, and timely delivery without contractor hassle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO & VIDEO SHOWCASE WITH DYNAMIC ADD FEATURE -->
+    <section id="portfolio" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest">Our Work Portfolio</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-white font-cinzel mt-2">Featured Projects & Videos</h2>
+                <p class="mt-2 text-slate-400 text-sm">Real execution photos, 3D renders, and walkthrough videos.</p>
+            </div>
+            
+            <!-- Add New Project Trigger (Owner Tool) -->
+            <div class="flex items-center gap-3">
+                <button onclick="openAddModal()" class="px-5 py-2.5 rounded-xl bg-slate-900 border border-gold-500/40 hover:bg-gold-500 hover:text-black text-gold-400 font-semibold text-xs transition flex items-center gap-2">
+                    <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                    <span>+ Add New Project (Photo/Video)</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 mb-8">
+            <button onclick="filterGallery('all')" class="gallery-tab active px-5 py-2 rounded-full text-xs font-bold bg-gold-500 text-black">All Projects</button>
+            <button onclick="filterGallery('architecture')" class="gallery-tab px-5 py-2 rounded-full text-xs font-bold bg-dark-900 border border-slate-800 text-slate-300 hover:text-gold-400">Architecture</button>
+            <button onclick="filterGallery('interior')" class="gallery-tab px-5 py-2 rounded-full text-xs font-bold bg-dark-900 border border-slate-800 text-slate-300 hover:text-gold-400">Interior</button>
+            <button onclick="filterGallery('3d')" class="gallery-tab px-5 py-2 rounded-full text-xs font-bold bg-dark-900 border border-slate-800 text-slate-300 hover:text-gold-400">3D Elevation</button>
+            <button onclick="filterGallery('video')" class="gallery-tab px-5 py-2 rounded-full text-xs font-bold bg-dark-900 border border-slate-800 text-slate-300 hover:text-gold-400">Videos & Walkthroughs</button>
+        </div>
+
+        <!-- Dynamic Gallery Grid -->
+        <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Items will be populated by JS -->
+        </div>
+    </section>
+
+    <!-- COST ESTIMATOR SECTION -->
+    <section id="estimator" class="py-20 bg-dark-900/80 border-y border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest">Instant Planning</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white font-cinzel mt-2">Space & Budget Estimator</h2>
+                <p class="text-slate-400 text-sm mt-2">Calculate estimated design and turnkey execution costs in seconds.</p>
+            </div>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-dark-950 border border-slate-800 grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Service Type:</label>
+                        <select id="est-service" onchange="calculateBudget()" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500">
+                            <option value="interior">Complete Interior Design</option>
+                            <option value="architecture">Architecture & 3D Elevation Only</option>
+                            <option value="turnkey">Full Turnkey Execution (Design + Material)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Total Carpet Area (Sq. Ft.):</label>
+                        <input type="range" id="est-sqft" min="500" max="5000" step="50" value="1500" oninput="calculateBudget()" class="w-full accent-gold-500">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>500 sq.ft.</span>
+                            <span id="sqft-display" class="text-gold-400 font-bold text-sm">1,500 Sq. Ft.</span>
+                            <span>5,000+ sq.ft.</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Design Finish Quality:</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button type="button" onclick="setQuality('premium')" id="btn-premium" class="py-2.5 rounded-xl border border-gold-500 bg-gold-500/10 text-gold-400 text-xs font-bold">Premium</button>
+                            <button type="button" onclick="setQuality('luxury')" id="btn-luxury" class="py-2.5 rounded-xl border border-slate-700 bg-dark-900 text-slate-400 text-xs font-bold">Ultra Luxury</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculation Output -->
+                <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-dark-950 border border-gold-500/30 text-center space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Estimated Project Budget</span>
+                    <div id="estimated-cost" class="text-3xl sm:text-4xl font-extrabold text-gold-400 font-cinzel">
+                        ₹1,80,000 - ₹2,50,000
+                    </div>
+                    <p class="text-xs text-slate-400">Includes customized layouts, 3D renders, material specs & site guidance.</p>
+                    <a href="https://wa.me/919319181300?text=Hello%20Space%20INNOVARE,%20I%20calculated%20my%20estimate%20on%20your%20website%20and%20want%20to%20discuss%20further." target="_blank" class="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black font-bold text-xs uppercase tracking-wider transition">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Book Site Consultation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & LOCATION SECTION -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest">About Space INNOVARE</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white font-cinzel mt-2 leading-tight">
+                    Innovating Spaces with Passion & Precision
+                </h2>
+                <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+                    Located in the heart of Bharatpur at Saras Circle (Opposite KFC), <strong>Space INNOVARE</strong> is a dedicated design consultancy committed to crafting extraordinary living and commercial spaces.
+                </p>
+                <div class="mt-8 space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="p-2.5 rounded-lg bg-gold-500/10 text-gold-400 shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Personalized Space Planning</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Every inch designed to maximize natural light, ventilation, and functional utility.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="p-2.5 rounded-lg bg-gold-500/10 text-gold-400 shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Transparent Cost Management</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">No hidden charges. Clear BOQs and itemized estimation for materials and labor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="p-8 rounded-3xl bg-dark-900 border border-slate-800 relative overflow-hidden">
+                <h3 class="text-xl font-bold text-white font-cinzel mb-4">Visit Our Studio</h3>
+                <div class="space-y-4 text-sm text-slate-300">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                        <span>Saras Circle, Opposite KFC, Bharatpur, Rajasthan - 321001</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                        <span>+91 93191 81300</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                        <span>spaceinnovare@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-slate-800 flex gap-4">
+                    <a href="https://maps.google.com/?q=Saras+Circle+Bharatpur" target="_blank" class="flex-1 py-3 text-center rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition">
+                        Open in Google Maps
+                    </a>
+                    <a href="tel:9319181300" class="flex-1 py-3 text-center rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold transition">
+                        Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact" class="py-20 bg-dark-900/60 border-t border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest">Connect With Us</span>
+                <h2 class="text-3xl font-bold text-white font-cinzel mt-2">Request a Free Consultation</h2>
+                <p class="text-slate-400 text-sm mt-1">Fill out the details below and we will contact you immediately on WhatsApp.</p>
+            </div>
+
+            <form onsubmit="handleContact(event)" class="p-8 rounded-3xl bg-dark-950 border border-slate-800 space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Your Name</label>
+                        <input type="text" id="cust-name" required placeholder="Full Name" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Phone Number</label>
+                        <input type="tel" id="cust-phone" required placeholder="e.g. 9876543210" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500">
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Requirement</label>
+                        <select id="cust-req" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500">
+                            <option value="Architecture Design">Architecture Design</option>
+                            <option value="Interior Design">Interior Design</option>
+                            <option value="3D Elevation & Visualization">3D Elevation & Visualization</option>
+                            <option value="Project Supervision & Turnkey">Project Supervision & Turnkey</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Plot/Space Size (Sq. Ft.)</label>
+                        <input type="text" id="cust-size" placeholder="e.g. 1500 sq.ft." class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Message or Details (Optional)</label>
+                    <textarea id="cust-msg" rows="3" placeholder="Tell us about your project..." class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-bold text-sm uppercase tracking-wider shadow-lg shadow-gold-500/20 flex items-center justify-center gap-2 transition">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Send Inquiry on WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-dark-950 border-t border-slate-800 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <h4 class="text-white font-cinzel text-lg font-bold">SPACE INNOVARE</h4>
+            <p class="text-gold-500 font-medium mt-1 text-[11px] tracking-wider uppercase">Crafting Dream Spaces | Saras Circle, Opp. KFC, Bharatpur</p>
+            <p class="mt-4">Call / WhatsApp: <a href="tel:9319181300" class="text-slate-300 font-bold hover:underline">+91 93191 81300</a></p>
+            <p class="mt-4 text-slate-600">© 2026 Space INNOVARE. All rights reserved. Powered by Dakshora AI.</p>
+        </div>
+    </footer>
+
+    <!-- ADD NEW PROJECT MODAL (OWNER UPDATE SYSTEM) -->
+    <div id="add-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-dark-950 border border-slate-700 rounded-3xl p-6 sm:p-8 max-w-lg w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-white font-cinzel">Add New Project / Video</h3>
+                <button onclick="closeAddModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+            </div>
+
+            <form onsubmit="saveNewProject(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Project Title</label>
+                    <input type="text" id="new-title" required placeholder="e.g. Modern Luxury Villa in Bharatpur" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Category</label>
+                    <select id="new-cat" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                        <option value="architecture">Architecture Design</option>
+                        <option value="interior">Interior Design</option>
+                        <option value="3d">3D Elevation</option>
+                        <option value="video">Video Walkthrough</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Media Type</label>
+                    <div class="flex gap-4 text-xs text-slate-300">
+                        <label class="flex items-center gap-1.5"><input type="radio" name="media_type" value="image" checked onchange="toggleMediaInput()"> Photo (Image URL)</label>
+                        <label class="flex items-center gap-1.5"><input type="radio" name="media_type" value="video" onchange="toggleMediaInput()"> Video (YouTube / MP4 URL)</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase mb-1" id="media-url-label">Image URL (Unsplash or direct image link)</label>
+                    <input type="url" id="new-url" required placeholder="https://..." class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Short Description / Location</label>
+                    <input type="text" id="new-desc" placeholder="e.g. 2500 Sq.ft Luxury Elevation" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                </div>
+
+                <div class="pt-4 flex gap-3">
+                    <button type="button" onclick="closeAddModal()" class="flex-1 py-3 rounded-xl bg-slate-800 text-slate-300 text-xs font-bold">Cancel</button>
+                    <button type="submit" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold">Save Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        lucide.createIcons();
+
+        // 1. Initial Projects Data
+        const initialProjects = [
+            {
+                title: "Contemporary Villa Elevation",
+                cat: "3d",
+                type: "image",
+                url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+                desc: "3200 Sq.Ft Modern Facade with Warm Illumination"
+            },
+            {
+                title: "Luxury Living Room Interior",
+                cat: "interior",
+                type: "image",
+                url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+                desc: "Italian Marble & Acoustic Wood Paneling"
+            },
+            {
+                title: "Vastu Architecture Drafting",
+                cat: "architecture",
+                type: "image",
+                url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+                desc: "Commercial Space Planning & Elevation"
+            },
+            {
+                title: "3D Villa Walkthrough Video",
+                cat: "video",
+                type: "video",
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                desc: "Cinematic VR Walkthrough Experience"
+            },
+            {
+                title: "Minimalist Master Bedroom",
+                cat: "interior",
+                type: "image",
+                url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80",
+                desc: "Warm Mood Lighting & Custom Headboard"
+            },
+            {
+                title: "Commercial Complex Elevation",
+                cat: "architecture",
+                type: "image",
+                url: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=800&q=80",
+                desc: "Bharatpur Multi-Storey Retail Concept"
+            }
+        ];
+
+        // Load from LocalStorage if available
+        let currentProjects = JSON.parse(localStorage.getItem('space_innovare_projects')) || initialProjects;
+
+        function renderGallery(filter = 'all') {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' ? currentProjects : currentProjects.filter(p => p.cat === filter);
+
+            filtered.forEach((p, idx) => {
+                const card = document.createElement('div');
+                card.className = "rounded-2xl bg-dark-900 border border-slate-800 overflow-hidden group hover:border-gold-500/40 transition duration-300";
+
+                let mediaHtml = '';
+                if (p.type === 'video') {
+                    if (p.url.includes('youtube.com') || p.url.includes('youtu.be')) {
+                        mediaHtml = `<iframe src="${p.url}" class="w-full h-56 object-cover" frameborder="0" allowfullscreen></iframe>`;
+                    } else {
+                        mediaHtml = `<video src="${p.url}" controls class="w-full h-56 object-cover"></video>`;
+                    }
+                } else {
+                    mediaHtml = `<div class="overflow-hidden h-56 relative"><img src="${p.url}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"><div class="absolute top-3 right-3 px-2.5 py-1 bg-black/70 text-[10px] text-gold-400 font-bold uppercase rounded-md backdrop-blur-sm border border-gold-500/20">${p.cat.toUpperCase()}</div></div>`;
+                }
+
+                card.innerHTML = `
+                    ${mediaHtml}
+                    <div class="p-5">
+                        <h4 class="font-bold text-white text-base font-cinzel">${p.title}</h4>
+                        <p class="text-xs text-slate-400 mt-1">${p.desc}</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        function filterGallery(cat) {
+            document.querySelectorAll('.gallery-tab').forEach(t => {
+                t.className = 'gallery-tab px-5 py-2 rounded-full text-xs font-bold bg-dark-900 border border-slate-800 text-slate-300 hover:text-gold-400';
+            });
+            event.target.className = 'gallery-tab active px-5 py-2 rounded-full text-xs font-bold bg-gold-500 text-black';
+            renderGallery(cat);
+        }
+
+        // Modal Controls
+        function openAddModal() {
+            document.getElementById('add-modal').classList.remove('hidden');
+        }
+        function closeAddModal() {
+            document.getElementById('add-modal').classList.add('hidden');
+        }
+        function toggleMediaInput() {
+            const isVideo = document.querySelector('input[name="media_type"]:checked').value === 'video';
+            document.getElementById('media-url-label').innerText = isVideo ? "Video Embed URL (e.g. YouTube Embed Link)" : "Image URL (Direct image link)";
+        }
+
+        function saveNewProject(e) {
+            e.preventDefault();
+            const title = document.getElementById('new-title').value;
+            const cat = document.getElementById('new-cat').value;
+            const type = document.querySelector('input[name="media_type"]:checked').value;
+            const url = document.getElementById('new-url').value;
+            const desc = document.getElementById('new-desc').value || 'Space INNOVARE Execution';
+
+            currentProjects.unshift({ title, cat, type, url, desc });
+            localStorage.setItem('space_innovare_projects', JSON.stringify(currentProjects));
+            
+            renderGallery('all');
+            closeAddModal();
+            alert('Project successfully added to portfolio!');
+        }
+
+        // 2. Cost Estimator Logic
+        let currentQuality = 'premium';
+        function setQuality(q) {
+            currentQuality = q;
+            if (q === 'premium') {
+                document.getElementById('btn-premium').className = 'py-2.5 rounded-xl border border-gold-500 bg-gold-500/10 text-gold-400 text-xs font-bold';
+                document.getElementById('btn-luxury').className = 'py-2.5 rounded-xl border border-slate-700 bg-dark-900 text-slate-400 text-xs font-bold';
+            } else {
+                document.getElementById('btn-luxury').className = 'py-2.5 rounded-xl border border-gold-500 bg-gold-500/10 text-gold-400 text-xs font-bold';
+                document.getElementById('btn-premium').className = 'py-2.5 rounded-xl border border-slate-700 bg-dark-900 text-slate-400 text-xs font-bold';
+            }
+            calculateBudget();
+        }
+
+        function calculateBudget() {
+            const sqft = parseInt(document.getElementById('est-sqft').value);
+            const service = document.getElementById('est-service').value;
+            document.getElementById('sqft-display').innerText = `${sqft.toLocaleString('en-IN')} Sq. Ft.`;
+
+            let rate = 25; // standard architecture rate
+            if (service === 'architecture') {
+                rate = currentQuality === 'premium' ? 25 : 40;
+            } else if (service === 'interior') {
+                rate = currentQuality === 'premium' ? 800 : 1500;
+            } else if (service === 'turnkey') {
+                rate = currentQuality === 'premium' ? 1800 : 2800;
+            }
+
+            const minCost = sqft * rate;
+            const maxCost = Math.round(minCost * 1.25);
+
+            document.getElementById('estimated-cost').innerText = `₹${minCost.toLocaleString('en-IN')} - ₹${maxCost.toLocaleString('en-IN')}`;
+        }
+
+        // 3. Contact Form Submission
+        function handleContact(e) {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const req = document.getElementById('cust-req').value;
+            const size = document.getElementById('cust-size').value || 'Not specified';
+            const msg = document.getElementById('cust-msg').value || 'Please share portfolio and quotation.';
+
+            const phoneTarget = "919319181300";
+            const text = `*New Design Consultation Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(req)}%0A*Plot/Size:* ${encodeURIComponent(size)}%0A*Details:* ${encodeURIComponent(msg)}`;
+
+            window.open(`https://wa.me/${phoneTarget}?text=${text}`, '_blank');
+        }
+
+        // Initial Render
+        renderGallery('all');
+        calculateBudget();
+    </script>
+</body>
+</html>
