@@ -651,12 +651,12 @@
         function verifyAdminPasscode(e) {
             e.preventDefault();
             const pass = document.getElementById('admin-passcode').value;
-            if (pass === "1234") {
+            if (pass === "djbhai") {
                 isAdminLoggedIn = true;
                 document.getElementById('admin-auth-box').classList.add('hidden');
                 document.getElementById('admin-upload-box').classList.remove('hidden');
             } else {
-                alert('गलत पासकोड! (Default: 1234)');
+                alert('गलत पासकोड!');
             }
         }
 
