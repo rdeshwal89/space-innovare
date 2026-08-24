@@ -6,6 +6,9 @@
     <title>Space INNOVARE | Crafting Dream Spaces - Architecture & Interior Design | Bharatpur • Jaipur • Noida</title>
     <meta name="description" content="Space INNOVARE - Crafting Dream Spaces. Premium Architecture Design, Luxury Interior Design, 3D Elevation & Turnkey Construction in Saras Circle, NH 21, Bharatpur, Jaipur & Noida.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -24,7 +27,7 @@
                         'neon-orange': '0 0 25px -5px rgba(249, 115, 22, 0.3)',
                         'neon-blue': '0 0 25px -5px rgba(59, 130, 246, 0.3)',
                         'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.3)',
-                        'neon-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.3)',
+                        'neon-emerald': '0 0 25px -5px rgba(16 bow, 129, 0.3)',
                         'neon-amber': '0 0 25px -5px rgba(245, 158, 11, 0.3)',
                         'neon-rose': '0 0 25px -5px rgba(244, 63, 94, 0.3)',
                     }
@@ -97,13 +100,13 @@
         </div>
     </div>
 
-    <!-- 2. MAIN NAVBAR WITH ATTACHED OFFICIAL LOGO -->
+    <!-- 2. MAIN NAVBAR WITH OFFICIAL PROPERLY SET LOGO -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             
-            <!-- OFFICIAL SPACE INNOVARE LOGO (IMAGE) -->
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="./assets/logo.jpg" alt="Space INNOVARE - Crafting Dream Spaces" class="h-12 sm:h-14 w-auto object-contain transform group-hover:scale-105 transition duration-300 rounded">
+            <!-- OFFICIAL SPACE INNOVARE LOGO -->
+            <a href="#" class="flex items-center group py-1" title="Space INNOVARE - Crafting Dream Spaces">
+                <img src="./assets/logo.jpg" alt="Space INNOVARE - Crafting Dream Spaces" class="h-12 sm:h-14 md:h-16 w-auto max-w-[220px] sm:max-w-[260px] object-contain transition duration-300 transform group-hover:scale-105">
             </a>
 
             <!-- Desktop Links -->
@@ -210,7 +213,7 @@
         </div>
     </section>
 
-    <!-- 4. ATTRACTIVE & COLORFUL SERVICES SECTION (ALL 6 BLOCKS ENHANCED) -->
+    <!-- 4. ATTRACTIVE & COLORFUL SERVICES SECTION -->
     <section id="services" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="px-3 py-1 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 text-brand-orangeDark text-[11px] font-extrabold uppercase tracking-wider border border-orange-200 shadow-sm">हमारी प्रमुख सेवाएं</span>
@@ -603,8 +606,8 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
             
             <!-- OFFICIAL LOGO IN FOOTER -->
-            <div class="p-2 bg-white rounded-2xl shadow-md mb-4 inline-block">
-                <img src="./assets/logo.jpg" alt="Space INNOVARE" class="h-10 w-auto object-contain">
+            <div class="mb-4 inline-block bg-white p-2.5 sm:p-3 rounded-2xl shadow-md">
+                <img src="./assets/logo.jpg" alt="Space INNOVARE" class="h-10 sm:h-12 w-auto object-contain">
             </div>
 
             <p class="text-slate-200 font-bold mt-1 tracking-wider uppercase text-sm">BHARATPUR • JAIPUR • NOIDA</p>
@@ -657,7 +660,7 @@
         </div>
     </div>
 
-    <!-- 11. ADMIN MODAL (WITH COMPRESSION, YOUTUBE CONVERTER, DATA EXPORT/IMPORT & DELETE) -->
+    <!-- 11. ADMIN MODAL (SECURE LOGIN WITH CUSTOM PASSWORD & NO HINT) -->
     <div id="admin-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl p-6 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             
@@ -669,8 +672,8 @@
                 </div>
                 <form onsubmit="verifyAdminPasscode(event)" class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">पासकोड दर्ज करें (Default: 1234)</label>
-                        <input type="password" id="admin-passcode" required placeholder="Enter Passcode..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">पासकोड दर्ज करें (Enter Password)</label>
+                        <input type="password" id="admin-passcode" required placeholder="••••••••••••" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                     </div>
                     <button type="submit" class="w-full py-3.5 bg-brand-dark hover:bg-slate-900 text-white font-bold rounded-xl text-xs uppercase tracking-wider shadow-md transition">
                         Login & Manage Gallery
@@ -824,7 +827,7 @@
         ];
 
         let currentGalleryFilter = 'all';
-        let liveProjects = JSON.parse(localStorage.getItem('space_innovare_final_v6')) || defaultProjects;
+        let liveProjects = JSON.parse(localStorage.getItem('space_innovare_final_v7')) || defaultProjects;
 
         // Parse YouTube links into embed URLs
         function parseYoutubeUrl(url) {
@@ -958,7 +961,7 @@
             if (e.target.id === 'lightbox-modal') closeLightbox();
         });
 
-        // 3. Admin Modal Logic
+        // 3. Admin Modal Logic (Password: Abcd@515151, No Hint)
         let isAdminLoggedIn = false;
 
         function openAdminModal() {
@@ -980,7 +983,7 @@
         function verifyAdminPasscode(e) {
             e.preventDefault();
             const pass = document.getElementById('admin-passcode').value;
-            if (pass === "1234") {
+            if (pass === "Abcd@515151") {
                 isAdminLoggedIn = true;
                 document.getElementById('admin-auth-box').classList.add('hidden');
                 document.getElementById('admin-dashboard-box').classList.remove('hidden');
@@ -989,7 +992,7 @@
                 renderGallery(currentGalleryFilter);
                 showToast("सफलतापूर्वक लॉगिन हुआ!", "success");
             } else {
-                showToast("गलत पासकोड! (Default: 1234)", "error");
+                showToast("गलत पासकोड!", "error");
             }
         }
 
@@ -1047,7 +1050,7 @@
         function deleteProject(id) {
             if (confirm("क्या आप वाकई इस प्रोजेक्ट/फोटो को हटाना चाहते हैं?")) {
                 liveProjects = liveProjects.filter(p => p.id !== id);
-                localStorage.setItem('space_innovare_final_v6', JSON.stringify(liveProjects));
+                localStorage.setItem('space_innovare_final_v7', JSON.stringify(liveProjects));
                 renderGallery(currentGalleryFilter);
                 renderAdminManageList();
                 showToast("प्रोजेक्ट सफलतापूर्वक हटा दिया गया।", "info");
@@ -1058,7 +1061,7 @@
         function resetToDefaultProjects() {
             if (confirm("क्या आप शुरुआत की सभी डिफ़ॉल्ट फोटोज़ वापस लाना चाहते हैं?")) {
                 liveProjects = [...defaultProjects];
-                localStorage.setItem('space_innovare_final_v6', JSON.stringify(liveProjects));
+                localStorage.setItem('space_innovare_final_v7', JSON.stringify(liveProjects));
                 renderGallery(currentGalleryFilter);
                 renderAdminManageList();
                 showToast("डिफ़ॉल्ट प्रोजेक्ट्स रीस्टोर हो गए!", "success");
@@ -1142,7 +1145,7 @@
         function saveAndRender(title, cat, type, url, desc) {
             liveProjects.unshift({ id: Date.now(), title, cat, type, url, desc });
             try {
-                localStorage.setItem('space_innovare_final_v6', JSON.stringify(liveProjects));
+                localStorage.setItem('space_innovare_final_v7', JSON.stringify(liveProjects));
             } catch (e) {
                 showToast('ब्राउज़र स्टोरेज फुल है। कृपया कुछ पुरानी फोटो डिलीट करें।', 'error');
                 return;
