@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Space INNOVARE | Crafting Dream Spaces - Architecture & Interior Design | Noida • Jaipur • Bharatpur</title>
-    <meta name="description" content="Space INNOVARE - Crafting Dream Spaces. Premium Architecture Design, Luxury Interior Design, 3D Elevation & Turnkey Construction in Bharatpur, Jaipur & Noida.">
+    <title>Space INNOVARE | Crafting Dream Spaces - Architecture & Interior Design | Bharatpur • Jaipur • Noida</title>
+    <meta name="description" content="Space INNOVARE - Crafting Dream Spaces. Premium Architecture Design, Luxury Interior Design, 3D Elevation & Turnkey Construction in Saras Circle, NH 21, Bharatpur, Jaipur & Noida.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,6 +19,14 @@
                             dark: '#0a0d14',
                             blue: '#1e3a8a',
                         }
+                    },
+                    boxShadow: {
+                        'neon-orange': '0 0 25px -5px rgba(249, 115, 22, 0.3)',
+                        'neon-blue': '0 0 25px -5px rgba(59, 130, 246, 0.3)',
+                        'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.3)',
+                        'neon-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.3)',
+                        'neon-amber': '0 0 25px -5px rgba(245, 158, 11, 0.3)',
+                        'neon-rose': '0 0 25px -5px rgba(244, 63, 94, 0.3)',
                     }
                 }
             }
@@ -46,64 +54,61 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased pb-20 md:pb-0 selection:bg-brand-orange selection:text-white">
 
-    <!-- 1. TOP CITIES & CONTACT BAR -->
-    <div class="bg-brand-dark text-white text-[11px] py-2 px-3 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-1.5">
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- 1. TOP CITIES, EMAIL & CONTACT BAR -->
+    <div class="bg-brand-dark text-white text-[11px] py-2 px-3 sm:px-6 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
             <div class="flex items-center gap-2">
                 <span class="px-2.5 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange font-bold border border-brand-orange/30 text-[10px] tracking-wider">
-                    NOIDA • JAIPUR • BHARATPUR
+                    BHARATPUR • JAIPUR • NOIDA
                 </span>
+                <span class="hidden md:inline text-slate-400 text-[11px]">| Saras Circle, NH 21, Bharatpur</span>
             </div>
             
-            <div class="flex items-center gap-3 font-semibold text-slate-300 ml-auto">
-                <a href="tel:9319181300" class="hover:text-brand-orange flex items-center gap-1">
-                    <i data-lucide="phone" class="w-3 h-3 text-brand-orange"></i> 9319181300
+            <div class="flex items-center gap-3 sm:gap-4 font-semibold text-slate-300 ml-auto flex-wrap">
+                <a href="mailto:spaceinnovare@gmail.com" class="hover:text-brand-orange flex items-center gap-1.5 transition">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-orange"></i>
+                    <span>spaceinnovare@gmail.com</span>
                 </a>
                 <span class="text-slate-700">|</span>
-                <a href="tel:9910007412" class="hover:text-brand-orange flex items-center gap-1">
-                    <i data-lucide="phone" class="w-3 h-3 text-brand-orange"></i> 9910007412
+                <a href="tel:9910007412" class="hover:text-brand-orange flex items-center gap-1.5 transition">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-orange"></i>
+                    <span>9910007412</span>
                 </a>
                 <span class="text-slate-700">|</span>
-                <a href="https://instagram.com/space_innovare" target="_blank" class="hover:text-pink-400 flex items-center gap-1">
-                    <i data-lucide="instagram" class="w-3 h-3 text-pink-400"></i> @space_innovare
+                <a href="https://instagram.com/space_innovare" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 flex items-center gap-1.5 transition">
+                    <i data-lucide="instagram" class="w-3.5 h-3.5 text-pink-400"></i>
+                    <span class="hidden sm:inline">@space_innovare</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- 2. MAIN NAVBAR WITH OFFICIAL LOGO -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+    <!-- 2. MAIN NAVBAR WITH ATTACHED OFFICIAL LOGO -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             
-            <!-- OFFICIAL SPACE INNOVARE LOGO -->
-            <a href="#" class="flex items-center gap-2 sm:gap-3 group">
-                <div class="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-brand-orange transform group-hover:scale-105 transition duration-300">
-                        <path d="M12 90V40L50 8L88 40" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 90H88" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                
-                <div class="flex flex-col justify-center font-logo">
-                    <span class="text-xs sm:text-sm font-medium tracking-[0.38em] text-slate-800 uppercase leading-none">
-                        SPACE
-                    </span>
-                    <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-950 uppercase leading-none mt-1 sm:mt-1.5">
-                        INNOVARE
-                    </span>
-                    <span class="text-[7.5px] sm:text-[9px] font-bold tracking-[0.24em] text-brand-orange uppercase leading-none mt-1">
-                        CRAFTING DREAM SPACES
-                    </span>
-                </div>
+            <!-- OFFICIAL SPACE INNOVARE LOGO (IMAGE) -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="./assets/logo.jpg" alt="Space INNOVARE - Crafting Dream Spaces" class="h-12 sm:h-14 w-auto object-contain transform group-hover:scale-105 transition duration-300 rounded">
             </a>
 
             <!-- Desktop Links -->
             <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-700">
-                <a href="#services" class="hover:text-brand-orange transition">सेवाएं</a>
+                <a href="#services" class="hover:text-brand-orange transition">सेवाएं (Services)</a>
                 <a href="#portfolio" class="hover:text-brand-orange transition">रियल प्रोजेक्ट्स</a>
                 <a href="#estimator" class="hover:text-brand-orange transition">लागत कैलकुलेटर</a>
                 <a href="#locations" class="hover:text-brand-orange transition">हमारे शहर</a>
@@ -112,12 +117,12 @@
 
             <!-- Admin & WhatsApp Buttons -->
             <div class="flex items-center gap-2 sm:gap-3">
-                <button onclick="openAdminModal()" id="nav-admin-btn" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center gap-1.5 border border-slate-300">
+                <button onclick="openAdminModal()" id="nav-admin-btn" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center gap-1.5 border border-slate-300 shadow-sm" title="Manage Projects">
                     <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-orange"></i>
                     <span class="hidden sm:inline">Admin View</span>
                 </button>
 
-                <a href="https://wa.me/919319181300?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Architecture/Interior%20Design" target="_blank" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orangeDark text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-brand-orange/20 flex items-center gap-1.5 transition transform hover:scale-105">
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Architecture/Interior%20Design" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orangeDark hover:from-brand-orangeDark hover:to-orange-700 text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-brand-orange/20 flex items-center gap-1.5 transition transform hover:scale-[1.02]">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
                     <span class="hidden sm:inline">मुफ्त परामर्श</span>
                     <span class="sm:hidden">Consult</span>
@@ -129,12 +134,12 @@
     <!-- 3. HERO SECTION -->
     <section class="relative pt-8 pb-14 sm:py-20 bg-gradient-to-b from-orange-50/40 via-white to-slate-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 <div class="lg:col-span-7 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-orange/30 shadow-sm text-xs font-bold text-brand-orangeDark mb-5">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span>अब Bharatpur, Jaipur व Noida में प्रीमियम सॉल्यूशन्स</span>
+                        <span>Saras Circle, NH 21, Bharatpur • Jaipur • Noida</span>
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-tight font-logo">
@@ -143,13 +148,13 @@
                     </h1>
 
                     <p class="mt-4 sm:mt-5 text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        2D नक्शा, 3D एलिवेशन, लक्ज़री इंटीरियर, संपूर्ण वास्तु अनुसार प्लानिंग, टर्नकी कंस्ट्रक्शन और <strong>नगर पालिका अप्रूवल ड्रॉइंग्स</strong>।
+                        2D नक्शा, 3D एलिवेशन, लक्ज़री इंटीरियर, सम्पूर्ण वास्तु अनुसार प्लानिंग, टर्नकी कंस्ट्रक्शन और <strong>नगर पालिका अप्रूवल ड्रॉइंग्स</strong>।
                     </p>
 
-                    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                        <a href="https://wa.me/919319181300?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20my%20home%20design" target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2.5 transition">
+                    <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                        <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20my%20home%20design" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2.5 transition transform hover:scale-[1.02]">
                             <i data-lucide="phone-call" class="w-4 h-4 text-brand-orange"></i>
-                            <span>कॉल / WhatsApp (9319181300)</span>
+                            <span>कॉल / WhatsApp (9910007412)</span>
                         </a>
                         <a href="#estimator" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-900 font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition">
                             <i data-lucide="calculator" class="w-4 h-4 text-brand-orange"></i>
@@ -162,102 +167,257 @@
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 bg-white p-2.5">
                         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Space INNOVARE 3D Elevation" class="w-full h-64 sm:h-80 object-cover rounded-2xl">
                         
-                        <div class="absolute bottom-5 left-5 right-5 p-3.5 rounded-2xl bg-brand-dark/90 backdrop-blur-md text-white flex items-center justify-between border border-white/10">
+                        <div class="absolute bottom-5 left-5 right-5 p-3.5 rounded-2xl bg-brand-dark/90 backdrop-blur-md text-white flex items-center justify-between border border-white/10 shadow-lg">
                             <div>
                                 <span class="text-xs font-black font-logo tracking-wider block text-brand-orange">SPACE INNOVARE</span>
-                                <span class="text-[10px] text-slate-300">Saras Circle, Opp. KFC, Bharatpur</span>
+                                <span class="text-[10px] text-slate-300">Saras Circle, NH 21, Bharatpur</span>
                             </div>
-                            <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-full border border-emerald-500/30">100% Vastu</span>
+                            <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-full border border-emerald-500/30 flex items-center gap-1">
+                                <i data-lucide="check-circle" class="w-3 h-3"></i> 100% Vastu
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Trust Bar -->
-            <div class="mt-8 flex gap-2.5 overflow-x-auto no-scrollbar py-2 text-xs font-bold text-slate-800">
-                <div class="shrink-0 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-2">
-                    <i data-lucide="users" class="w-4 h-4 text-brand-orange"></i> अनुभवी आर्किटेक्ट टीम
+            <div class="mt-10 flex gap-3 overflow-x-auto no-scrollbar py-2 text-xs font-bold text-slate-800">
+                <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                    </div>
+                    <span>अनुभवी आर्किटेक्ट टीम</span>
                 </div>
-                <div class="shrink-0 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-2">
-                    <i data-lucide="compass" class="w-4 h-4 text-brand-orange"></i> वास्तु अनुसार डिज़ाइन
+                <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
+                        <i data-lucide="compass" class="w-4 h-4"></i>
+                    </div>
+                    <span>वास्तु अनुसार डिज़ाइन</span>
                 </div>
-                <div class="shrink-0 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-2">
-                    <i data-lucide="clock" class="w-4 h-4 text-brand-orange"></i> समय पर डिलीवरी
+                <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                    </div>
+                    <span>समय पर डिलीवरी</span>
                 </div>
-                <div class="shrink-0 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-2">
-                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> क्वालिटी की गारंटी
+                <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    </div>
+                    <span>क्वालिटी की गारंटी</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. SERVICES SECTION -->
-    <section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[11px] font-bold uppercase tracking-wider">हमारी सेवाएं</span>
+    <!-- 4. ATTRACTIVE & COLORFUL SERVICES SECTION (ALL 6 BLOCKS ENHANCED) -->
+    <section id="services" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="px-3 py-1 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 text-brand-orangeDark text-[11px] font-extrabold uppercase tracking-wider border border-orange-200 shadow-sm">हमारी प्रमुख सेवाएं</span>
             <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">Architecture & Interior Suite</h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2">आपकी आवश्यकता अनुसार हाई-क्वालिटी, वास्तु-अनुकूलित एवं आधुनिक आर्किटेक्चरल समाधान</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
-                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
-                    <i data-lucide="layers" class="w-6 h-6"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- BLOCK 1: 2D FLOOR PLAN (BLUEPRINT BLUE THEME) -->
+            <div class="relative rounded-3xl p-6 sm:p-7 bg-gradient-to-br from-blue-50/90 via-white to-cyan-50/50 border-2 border-blue-200 shadow-md hover:shadow-neon-blue hover:border-blue-500 transition-all duration-300 group flex flex-col justify-between overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-110 transition duration-300">
+                            <i data-lucide="layers" class="w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-[10px] font-extrabold uppercase tracking-wider border border-blue-200">
+                            2D Planning
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-slate-900 font-logo group-hover:text-blue-600 transition">नक्शा (2D Floor Plan)</h3>
+                    <p class="mt-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        हवा, प्राकृतिक रोशनी और वास्तु के अनुसार घर, विला एवं कमर्शियल स्पेस के सटीक व विस्तृत वर्किंग लेआउट्स।
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="mt-4 pt-3 border-t border-blue-100/80 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-blue-200 text-blue-700 text-[10px] font-semibold">✓ 100% सटीक लेआउट</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-blue-200 text-blue-700 text-[10px] font-semibold">✓ क्रॉस-वेंटिलेशन</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-blue-200 text-blue-700 text-[10px] font-semibold">✓ वर्किंग ड्रॉइंग्स</span>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 font-logo">नक्शा (2D Floor Plan)</h3>
-                <p class="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    हवा, रोशनी और वास्तु के अनुसार घर और दुकानों के सटीक वर्किंग लेआउट्स।
-                </p>
+
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20am%20interested%20in%202D%20Floor%20Plan%20(नक्शा)%20services." target="_blank" class="mt-6 w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-blue-600/20 transition">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                    <span>नक्शे के लिए संपर्क करें</span>
+                </a>
             </div>
 
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
-                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
-                    <i data-lucide="box" class="w-6 h-6"></i>
+            <!-- BLOCK 2: 3D FRONT ELEVATION (SUNSET ORANGE THEME) -->
+            <div class="relative rounded-3xl p-6 sm:p-7 bg-gradient-to-br from-orange-50/90 via-white to-amber-50/50 border-2 border-orange-200 shadow-md hover:shadow-neon-orange hover:border-brand-orange transition-all duration-300 group flex flex-col justify-between overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-orange to-amber-500 text-white flex items-center justify-center shadow-lg shadow-orange-500/30 group-hover:scale-110 transition duration-300">
+                            <i data-lucide="box" class="w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[10px] font-extrabold uppercase tracking-wider border border-orange-200">
+                            3D Exterior
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-slate-900 font-logo group-hover:text-brand-orange transition">3D फ्रंट एलिवेशन</h3>
+                    <p class="mt-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        मकान बनने से पहले ही उसका अल्ट्रा-रियलिस्टिक 4K 3D एक्सटीरियर, डे/नाईट वॉर्म लाइटिंग व्यू एवं मॉडर्न कलर कॉम्बिनेशन।
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="mt-4 pt-3 border-t border-orange-100/80 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-orange-200 text-orange-800 text-[10px] font-semibold">✓ 4K Ultra HD 3D</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-orange-200 text-orange-800 text-[10px] font-semibold">✓ डे / नाईट व्यू</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-orange-200 text-orange-800 text-[10px] font-semibold">✓ मटेरियल गाइडेंस</span>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 font-logo">3D फ्रंट एलिवेशन</h3>
-                <p class="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    मकान बनने से पहले ही उसका रियल 3D एक्सटीरियर और डे/नाईट लाइटिंग व्यू।
-                </p>
+
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20am%20interested%20in%203D%20Front%20Elevation%20design." target="_blank" class="mt-6 w-full py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-brand-orange/20 transition">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                    <span>3D एलिवेशन बनवाएं</span>
+                </a>
             </div>
 
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
-                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
-                    <i data-lucide="armchair" class="w-6 h-6"></i>
+            <!-- BLOCK 3: LUXURY INTERIOR DESIGN (ROYAL PURPLE THEME) -->
+            <div class="relative rounded-3xl p-6 sm:p-7 bg-gradient-to-br from-purple-50/90 via-white to-pink-50/50 border-2 border-purple-200 shadow-md hover:shadow-neon-purple hover:border-purple-500 transition-all duration-300 group flex flex-col justify-between overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-pink-500 text-white flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-110 transition duration-300">
+                            <i data-lucide="armchair" class="w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-[10px] font-extrabold uppercase tracking-wider border border-purple-200">
+                            Luxury Interior
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-slate-900 font-logo group-hover:text-purple-600 transition">लक्ज़री इंटीरियर डिज़ाइन</h3>
+                    <p class="mt-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        इटैलियन मार्बल, मॉडर्न फॉल्स सीलिंग, मॉड्यूलर किचन, प्रीमियम वॉर्डरोब, टीवी यूनिट और स्मार्ट एंबिएंट लाइटिंग।
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="mt-4 pt-3 border-t border-purple-100/80 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-purple-200 text-purple-800 text-[10px] font-semibold">✓ मॉड्यूलर किचन</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-purple-200 text-purple-800 text-[10px] font-semibold">✓ प्रीमियम वुडवर्क</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-purple-200 text-purple-800 text-[10px] font-semibold">✓ स्मार्ट लाइटिंग</span>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 font-logo">लक्ज़री इंटीरियर डिज़ाइन</h3>
-                <p class="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    इटैलियन मार्बल, फॉल्स सीलिंग, मॉड्यूलर वॉर्डरोब, किचन व स्मार्ट लाइटिंग।
-                </p>
+
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20am%20interested%20in%20Luxury%20Interior%20Design%20services." target="_blank" class="mt-6 w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-purple-600/20 transition">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                    <span>इंटीरियर कंसल्टेशन लें</span>
+                </a>
             </div>
 
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
-                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
-                    <i data-lucide="compass" class="w-6 h-6"></i>
+            <!-- BLOCK 4: VASTU PLANNING (EMERALD GREEN THEME) -->
+            <div class="relative rounded-3xl p-6 sm:p-7 bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/50 border-2 border-emerald-200 shadow-md hover:shadow-neon-emerald hover:border-emerald-500 transition-all duration-300 group flex flex-col justify-between overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition duration-300">
+                            <i data-lucide="compass" class="w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase tracking-wider border border-emerald-200">
+                            100% Vastu
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-slate-900 font-logo group-hover:text-emerald-600 transition">वास्तु अनुसार प्लानिंग</h3>
+                    <p class="mt-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        मुख्य द्वार, आग्नेय कोण किचन, नैऋत्य मास्टर बेडरूम, सीढ़ियों व पूजा घर की स्थिति का प्रमाणिक व वैज्ञानिक वास्तु समाधान।
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="mt-4 pt-3 border-t border-emerald-100/80 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-emerald-200 text-emerald-800 text-[10px] font-semibold">✓ दिशा संतुलन</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-emerald-200 text-emerald-800 text-[10px] font-semibold">✓ पॉजिटिव एनर्जी फ्लो</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-emerald-200 text-emerald-800 text-[10px] font-semibold">✓ वैज्ञानिक वास्तु</span>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 font-logo">वास्तु अनुसार प्लानिंग</h3>
-                <p class="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    मुख्य द्वार, किचन, बेडरूम और मंदिर की स्थिति का प्रमाणिक वास्तु समाधान।
-                </p>
+
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Vastu%20Planning." target="_blank" class="mt-6 w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20 transition">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                    <span>वास्तु सलाह बुक करें</span>
+                </a>
             </div>
 
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
-                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
-                    <i data-lucide="hard-hat" class="w-6 h-6"></i>
+            <!-- BLOCK 5: TURNKEY CONSTRUCTION (GOLDEN AMBER THEME) -->
+            <div class="relative rounded-3xl p-6 sm:p-7 bg-gradient-to-br from-amber-50/90 via-white to-yellow-50/50 border-2 border-amber-200 shadow-md hover:shadow-neon-amber hover:border-amber-500 transition-all duration-300 group flex flex-col justify-between overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-600 to-yellow-500 text-white flex items-center justify-center shadow-lg shadow-amber-500/30 group-hover:scale-110 transition duration-300">
+                            <i data-lucide="hard-hat" class="w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-[10px] font-extrabold uppercase tracking-wider border border-amber-200">
+                            End-to-End Build
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-slate-900 font-logo group-hover:text-amber-600 transition">टर्नकी कंस्ट्रक्शन</h3>
+                    <p class="mt-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        मटेरियल विथ लेबर सहित सम्पूर्ण A-to-Z निर्माण। अनुभवी सिविल इंजीनियरों द्वारा साइट पर डेली क्वालिटी सुपरविजन।
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="mt-4 pt-3 border-t border-amber-100/80 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-amber-200 text-amber-800 text-[10px] font-semibold">✓ विद मटेरियल कंस्ट्रक्शन</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-amber-200 text-amber-800 text-[10px] font-semibold">✓ साइट सुपरविजन</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-amber-200 text-amber-800 text-[10px] font-semibold">✓ ऑन-टाइम डिलीवरी</span>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 font-logo">टर्नकी कंस्ट्रक्शन</h3>
-                <p class="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    मटेरियल विथ लेबर सहित सम्पूर्ण निर्माण। साइट पर डेली क्वालिटी सुपरविजन।
-                </p>
+
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20inquire%20about%20Turnkey%20Construction." target="_blank" class="mt-6 w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-amber-600/20 transition">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                    <span>कंस्ट्रक्शन कोटेशन लें</span>
+                </a>
             </div>
 
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-orange transition group">
-                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center mb-4 font-bold text-xl group-hover:bg-brand-orange group-hover:text-white transition">
-                    <i data-lucide="file-text" class="w-6 h-6"></i>
+            <!-- BLOCK 6: MUNICIPAL APPROVAL DRAWINGS (CRIMSON ROSE THEME) -->
+            <div class="relative rounded-3xl p-6 sm:p-7 bg-gradient-to-br from-rose-50/90 via-white to-red-50/50 border-2 border-rose-200 shadow-md hover:shadow-neon-rose hover:border-rose-500 transition-all duration-300 group flex flex-col justify-between overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-600 to-red-500 text-white flex items-center justify-center shadow-lg shadow-rose-500/30 group-hover:scale-110 transition duration-300">
+                            <i data-lucide="file-check" class="w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-[10px] font-extrabold uppercase tracking-wider border border-rose-200">
+                            Govt. Approval
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-slate-900 font-logo group-hover:text-rose-600 transition">नगर पालिका अप्रूवल</h3>
+                    <p class="mt-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        नक्शा पास कराने और सरकारी बायलॉज नियमों के अनुसार संपूर्ण सैंक्शन अप्रूवल ड्रॉइंग्स व सबमिशन फाइल्स।
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="mt-4 pt-3 border-t border-rose-100/80 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-rose-200 text-rose-800 text-[10px] font-semibold">✓ सरकारी बायलॉज अनुसार</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-rose-200 text-rose-800 text-[10px] font-semibold">✓ सैंक्शन ड्रॉइंग्स</span>
+                        <span class="px-2 py-0.5 rounded-md bg-white border border-rose-200 text-rose-800 text-[10px] font-semibold">✓ 100% लीगल फाइलिंग</span>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 font-logo">नगर पालिका अप्रूवल</h3>
-                <p class="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    नक्शा पास कराने और सरकारी नियमों के अनुसार सैंक्शन अप्रूवल ड्रॉइंग्स।
-                </p>
+
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20need%20Municipality/Nagar%20Palika%20Approval%20Drawings." target="_blank" class="mt-6 w-full py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-rose-600/20 transition">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                    <span>अप्रूवल ड्रॉइंग बनवाएं</span>
+                </a>
             </div>
+
         </div>
     </section>
 
@@ -266,25 +426,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
                 <div>
-                    <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase">Real Execution</span>
+                    <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">Real Execution</span>
                     <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">हमारे रियल प्रोजेक्ट्स & वीडियो</h2>
-                    <p id="admin-status-indicator" class="text-xs text-slate-500 mt-1"></p>
+                    <p id="admin-status-indicator" class="text-xs text-slate-500 mt-1">हमारे द्वारा पूरे किए गए कार्य का वास्तविक विवरण</p>
                 </div>
                 
                 <!-- Open Admin Panel -->
-                <button onclick="openAdminModal()" class="px-4 py-2.5 rounded-xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-xs flex items-center gap-2 self-start sm:self-auto shadow-md">
+                <button onclick="openAdminModal()" class="px-4 py-2.5 rounded-xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-xs flex items-center gap-2 self-start sm:self-auto shadow-md transition">
                     <i data-lucide="sliders-horizontal" class="w-4 h-4 text-brand-orange"></i>
                     <span>Manage / Delete Projects</span>
                 </button>
             </div>
 
             <!-- Filter Pills -->
-            <div class="flex gap-2 overflow-x-auto no-scrollbar pb-3 mb-6">
-                <button onclick="filterGallery('all')" class="gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-brand-dark text-white shadow-sm">सभी (All)</button>
-                <button onclick="filterGallery('interior')" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700">लक्ज़री इंटीरियर</button>
-                <button onclick="filterGallery('woodwork')" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700">डोर्स & वॉर्डरोब</button>
-                <button onclick="filterGallery('3d')" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700">3D एलिवेशन</button>
-                <button onclick="filterGallery('video')" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700">वीडियो</button>
+            <div class="flex gap-2 overflow-x-auto no-scrollbar pb-3 mb-6" id="gallery-tabs-container">
+                <button onclick="filterGallery('all', this)" class="gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-brand-dark text-white shadow-sm transition">सभी (All)</button>
+                <button onclick="filterGallery('interior', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">लक्ज़री इंटीरियर</button>
+                <button onclick="filterGallery('woodwork', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">डोर्स & वॉर्डरोब</button>
+                <button onclick="filterGallery('3d', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">3D एलिवेशन</button>
+                <button onclick="filterGallery('video', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">वीडियो</button>
             </div>
 
             <!-- Dynamic Project Grid -->
@@ -296,44 +456,47 @@
 
     <!-- 6. THREE CITIES PRESENCE SECTION -->
     <section id="locations" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[11px] font-bold uppercase tracking-wider">Service Areas</span>
-            <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">Noida • Jaipur • Bharatpur</h2>
+            <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">Bharatpur • Jaipur • Noida</h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2">हमारे प्रमुख शहरों में ऑन-साइट विज़िट और ऑनलाइन कंसल्टेंसी उपलब्ध</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-3xl bg-white border-2 border-brand-orange shadow-md relative">
-                <span class="absolute top-4 right-4 px-2.5 py-0.5 bg-brand-orange text-white text-[10px] font-black uppercase rounded-full">Head Studio</span>
+            <div class="p-6 rounded-3xl bg-white border-2 border-brand-orange shadow-md relative group hover:shadow-xl transition">
+                <span class="absolute top-4 right-4 px-2.5 py-0.5 bg-brand-orange text-white text-[10px] font-black uppercase rounded-full tracking-wider">Head Studio</span>
                 <div class="w-10 h-10 rounded-xl bg-orange-50 text-brand-orange flex items-center justify-center mb-3">
                     <i data-lucide="map-pin" class="w-5 h-5"></i>
                 </div>
                 <h3 class="text-lg font-bold text-slate-900 font-logo">BHARATPUR</h3>
-                <p class="text-xs text-slate-600 mt-1">Saras Circle, Opposite KFC, Bharatpur, Rajasthan</p>
+                <p class="text-xs text-slate-600 mt-1">Saras Circle, NH 21, Bharatpur, Rajasthan</p>
                 <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800 flex items-center justify-between">
-                    <span>Phone: 9319181300</span>
-                    <a href="https://maps.google.com/?q=Saras+Circle+Bharatpur" target="_blank" class="text-brand-orange underline">Maps View</a>
+                    <a href="tel:9910007412" class="flex items-center gap-1 hover:text-brand-orange"><i data-lucide="phone" class="w-3 h-3 text-brand-orange"></i> 9910007412</a>
+                    <a href="https://maps.google.com/?q=Saras+Circle+NH+21+Bharatpur" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline font-bold">Google Maps</a>
                 </div>
             </div>
 
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
+            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm group hover:shadow-xl hover:border-slate-300 transition">
                 <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-3">
                     <i data-lucide="building" class="w-5 h-5"></i>
                 </div>
                 <h3 class="text-lg font-bold text-slate-900 font-logo">JAIPUR</h3>
-                <p class="text-xs text-slate-600 mt-1">Architecture Consultation & Luxury Interior Planning</p>
-                <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
-                    <span>Phone: 9910007412</span>
+                <p class="text-xs text-slate-600 mt-1">Architecture Consultation & Luxury Interior Planning Across Jaipur</p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800 flex items-center justify-between">
+                    <a href="tel:9910007412" class="flex items-center gap-1 hover:text-brand-orange"><i data-lucide="phone" class="w-3 h-3 text-brand-orange"></i> 9910007412</a>
+                    <span class="text-slate-400 text-[11px]">Pink City Zone</span>
                 </div>
             </div>
 
-            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
+            <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm group hover:shadow-xl hover:border-slate-300 transition">
                 <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-3">
                     <i data-lucide="building-2" class="w-5 h-5"></i>
                 </div>
                 <h3 class="text-lg font-bold text-slate-900 font-logo">NOIDA / NCR</h3>
-                <p class="text-xs text-slate-600 mt-1">Modern High-Rise & Villa Interior Design Services</p>
-                <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
-                    <span>Phone: 9319181300</span>
+                <p class="text-xs text-slate-600 mt-1">Modern High-Rise Apartments & Luxury Villa Interior Design Services</p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800 flex items-center justify-between">
+                    <a href="tel:9910007412" class="flex items-center gap-1 hover:text-brand-orange"><i data-lucide="phone" class="w-3 h-3 text-brand-orange"></i> 9910007412</a>
+                    <span class="text-slate-400 text-[11px]">NCR Hub</span>
                 </div>
             </div>
         </div>
@@ -343,41 +506,46 @@
     <section id="estimator" class="py-16 bg-brand-dark text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-8">
-                <span class="px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-[11px] font-bold uppercase">Budget Planning</span>
+                <span class="px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-[11px] font-bold uppercase tracking-wider">Budget Planning</span>
                 <h2 class="text-2xl sm:text-3xl font-black font-logo mt-2">आर्किटेक्चर & इंटीरियर लागत कैलकुलेटर</h2>
+                <p class="text-xs text-slate-400 mt-1">अपने प्लॉट या मकान के साइज के अनुसार तुरंत अनुमानित लागत जानें</p>
             </div>
 
-            <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 space-y-6">
+            <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 space-y-6 shadow-2xl">
                 <div>
                     <label class="block text-xs font-bold text-slate-400 uppercase mb-2">सेवा चुनें:</label>
-                    <select id="est-service" onchange="calculateBudget()" class="w-full bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-sm text-white font-semibold focus:outline-none focus:border-brand-orange">
-                        <option value="interior">लक्ज़री इंटीरियर डिज़ाइन</option>
-                        <option value="architecture">नक्शा 2D + 3D एलिवेशन</option>
-                        <option value="turnkey">टर्नकी कंस्ट्रक्शन (मटेरियल + फिनिशिंग)</option>
+                    <select id="est-service" onchange="calculateBudget()" class="w-full bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-sm text-white font-semibold focus:outline-none focus:border-brand-orange transition">
+                        <option value="interior">लक्ज़री इंटीरियर डिज़ाइन (₹950 - ₹1,200/sq.ft)</option>
+                        <option value="architecture">नक्शा 2D + 3D एलिवेशन (₹25 - ₹35/sq.ft)</option>
+                        <option value="turnkey">टर्नकी कंस्ट्रक्शन (मटेरियल + फिनिशिंग - ₹1,950 - ₹2,400/sq.ft)</option>
                     </select>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">एरिया (Sq. Ft.):</label>
-                    <input type="range" id="est-sqft" min="500" max="5000" step="50" value="1500" oninput="calculateBudget()" class="w-full accent-brand-orange">
-                    <div class="flex justify-between text-xs text-slate-400 mt-1 font-bold">
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="block text-xs font-bold text-slate-400 uppercase">एरिया (Sq. Ft.):</label>
+                        <span id="sqft-display" class="text-brand-orange text-sm font-bold">1,500 Sq. Ft.</span>
+                    </div>
+                    <input type="range" id="est-sqft" min="500" max="5000" step="50" value="1500" oninput="calculateBudget()" class="w-full accent-brand-orange cursor-pointer">
+                    <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-semibold">
                         <span>500 sq.ft.</span>
-                        <span id="sqft-display" class="text-brand-orange text-sm">1,500 Sq. Ft.</span>
+                        <span>2,500 sq.ft.</span>
                         <span>5,000+ sq.ft.</span>
                     </div>
                 </div>
 
                 <div class="p-5 rounded-2xl bg-brand-dark border border-brand-orange/40 text-center space-y-2">
-                    <span class="text-[11px] uppercase tracking-widest text-slate-400">अनुमानित प्रोजेक्ट बजट</span>
-                    <div id="estimated-cost" class="text-2xl sm:text-3xl font-black text-brand-orange font-logo">
-                        ₹1,80,000 - ₹2,50,000
+                    <span class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold">अनुमानित प्रोजेक्ट बजट</span>
+                    <div id="estimated-cost" class="text-2xl sm:text-4xl font-black text-brand-orange font-logo tracking-tight">
+                        ₹14,25,000 - ₹17,81,250
                     </div>
+                    <p class="text-[10px] text-slate-400 italic">*यह एक अनुमानित लागत है। वास्तविक आवश्यकता और फिनिशिंग मटेरियल चयन के आधार पर लागत भिन्न हो सकती है।</p>
                 </div>
 
-                <a href="https://wa.me/919319181300?text=नमस्ते%20Space%20INNOVARE,%20मैंने%20वेबसाइट%20पर%20बजट%20कैलकुलेट%20किया%20है,%20कृपया%20आगे%20बातचीत%20करें।" target="_blank" class="w-full py-3.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-lg shadow-brand-orange/20">
+                <button onclick="sendBudgetToWhatsApp()" class="w-full py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition shadow-lg shadow-brand-orange/20">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    <span>WhatsApp पर साइट विजिट बुक करें</span>
-                </a>
+                    <span>WhatsApp पर यह एस्टीमेट भेजें & साइट विजिट बुक करें</span>
+                </button>
             </div>
         </div>
     </section>
@@ -385,44 +553,45 @@
     <!-- 8. CONTACT FORM -->
     <section id="contact" class="py-16 max-w-3xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-8">
-            <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[11px] font-bold uppercase">Free Consultation</span>
+            <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[11px] font-bold uppercase tracking-wider">Free Consultation</span>
             <h2 class="text-2xl sm:text-3xl font-black text-slate-950 font-logo mt-2">मुफ्त परामर्श के लिए फॉर्म भरें</h2>
+            <p class="text-xs text-slate-600 mt-1">हमारे एक्सपर्ट आर्किटेक्ट से सीधे WhatsApp या ईमेल (spaceinnovare@gmail.com) पर जुड़ें</p>
         </div>
 
         <form onsubmit="handleContact(event)" class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-4">
             <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">आपका नाम</label>
-                <input type="text" id="cust-name" required placeholder="पूरा नाम दर्ज करें" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange">
+                <input type="text" id="cust-name" required placeholder="उदा. राहुल शर्मा" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">मोबाइल नंबर</label>
-                    <input type="tel" id="cust-phone" required placeholder="उदा. 9876543210" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange">
+                    <input type="tel" id="cust-phone" required placeholder="उदा. 9910007412" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">शहर चुनें</label>
-                    <select id="cust-city" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange font-bold">
-                        <option value="Bharatpur">Bharatpur (भरतपुर)</option>
+                    <select id="cust-city" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange font-bold transition">
+                        <option value="Bharatpur (Saras Circle, NH 21)">Bharatpur (भरतपुर)</option>
                         <option value="Jaipur">Jaipur (जयपुर)</option>
                         <option value="Noida">Noida / NCR (नोएडा)</option>
-                        <option value="Other">अन्य शहर</option>
+                        <option value="Other">अन्य शहर (Other City)</option>
                     </select>
                 </div>
             </div>
 
             <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">सेवा</label>
-                <select id="cust-req" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange font-semibold">
-                    <option value="Architecture 2D/3D">नक्शा & 3D एलिवेशन</option>
-                    <option value="Luxury Interior">लक्ज़री इंटीरियर डिज़ाइन</option>
-                    <option value="Vastu Planning">वास्तु प्लानिंग</option>
-                    <option value="Turnkey Construction">टर्नकी कंस्ट्रक्शन</option>
-                    <option value="Nagar Palika Approval">नगर पालिका अप्रूवल ड्रॉइंग्स</option>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">आवश्यक सेवा</label>
+                <select id="cust-req" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange font-semibold transition">
+                    <option value="Architecture 2D/3D">नक्शा & 3D एलिवेशन (Architecture)</option>
+                    <option value="Luxury Interior">लक्ज़री इंटीरियर डिज़ाइन (Interior)</option>
+                    <option value="Vastu Planning">वास्तु अनुसार प्लानिंग (Vastu)</option>
+                    <option value="Turnkey Construction">टर्नकी कंस्ट्रक्शन (Turnkey)</option>
+                    <option value="Nagar Palika Approval">नगर पालिका अप्रूवल ड्रॉइंग्स (Approval)</option>
                 </select>
             </div>
 
-            <button type="submit" class="w-full py-4 rounded-xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 transition">
+            <button type="submit" class="w-full py-4 rounded-xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 transition transform hover:scale-[1.01]">
                 <i data-lucide="send" class="w-4 h-4 text-brand-orange"></i>
                 <span>WhatsApp पर विवरण भेजें</span>
             </button>
@@ -433,41 +602,62 @@
     <footer class="py-12 bg-brand-dark text-center text-xs text-slate-400 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
             
-            <div class="flex items-center gap-2.5 mb-3">
-                <svg viewBox="0 0 100 100" fill="none" class="w-8 h-8 text-brand-orange">
-                    <path d="M12 90V40L50 8L88 40" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 90H88" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
-                </svg>
-                <div class="flex flex-col items-start font-logo text-white text-left">
-                    <span class="text-[10px] tracking-[0.35em] text-slate-400 uppercase leading-none">SPACE</span>
-                    <span class="text-base font-black tracking-tight uppercase leading-none mt-1">INNOVARE</span>
-                    <span class="text-[7px] tracking-[0.2em] text-brand-orange uppercase leading-none mt-0.5">CRAFTING DREAM SPACES</span>
-                </div>
+            <!-- OFFICIAL LOGO IN FOOTER -->
+            <div class="p-2 bg-white rounded-2xl shadow-md mb-4 inline-block">
+                <img src="./assets/logo.jpg" alt="Space INNOVARE" class="h-10 w-auto object-contain">
             </div>
 
-            <p class="text-slate-300 font-semibold mt-2">NOIDA • JAIPUR • BHARATPUR</p>
-            <p class="mt-1">Saras Circle, Opposite KFC, Bharatpur (Raj.) | Phone: 9319181300, 9910007412</p>
-            <p class="mt-4 text-slate-600">© 2026 Space INNOVARE. All rights reserved. Powered by Dakshora AI.</p>
+            <p class="text-slate-200 font-bold mt-1 tracking-wider uppercase text-sm">BHARATPUR • JAIPUR • NOIDA</p>
+            <p class="mt-2 text-slate-300 font-medium">📍 Saras Circle, NH 21, Bharatpur (Raj.)</p>
+            <p class="mt-1 flex items-center justify-center gap-3 flex-wrap">
+                <a href="tel:9910007412" class="text-brand-orange font-semibold hover:underline">📞 9910007412</a>
+                <span>•</span>
+                <a href="mailto:spaceinnovare@gmail.com" class="text-brand-orange font-semibold hover:underline">✉️ spaceinnovare@gmail.com</a>
+            </p>
+            <p class="mt-5 text-slate-600 text-[11px]">© 2026 Space INNOVARE. All rights reserved. Powered by Dakshora AI.</p>
         </div>
     </footer>
 
     <!-- STICKY MOBILE ACTION BAR -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 px-3 flex items-center justify-between gap-2 shadow-2xl">
-        <a href="tel:9319181300" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold text-xs flex items-center justify-center gap-1.5 border border-slate-300">
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 px-3 flex items-center justify-between gap-2 shadow-2xl">
+        <a href="tel:9910007412" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold text-xs flex items-center justify-center gap-1.5 border border-slate-300 transition">
             <i data-lucide="phone-call" class="w-4 h-4 text-brand-orange"></i>
             <span>कॉल करें</span>
         </a>
-        <a href="https://wa.me/919319181300?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Architecture/Interior" target="_blank" class="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
+        <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Architecture/Interior" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
             <span>WhatsApp</span>
         </a>
-        <a href="#estimator" class="flex-1 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white font-black text-xs flex items-center justify-center gap-1">
+        <a href="#estimator" class="flex-1 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white font-black text-xs flex items-center justify-center gap-1 transition">
             <i data-lucide="calculator" class="w-4 h-4"></i>
             <span>लागत</span>
         </a>
     </div>
 
-    <!-- 10. ADMIN MODAL (WITH DIRECT UPLOAD + DELETE / MANAGE PROJECTS) -->
+    <!-- 10. PROJECT PREVIEW / LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-slate-950 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col max-h-[90vh]">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black/90 flex items-center justify-center transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="lightbox-media" class="w-full flex-1 min-h-[300px] flex items-center justify-center bg-black">
+                <!-- Injected by JS -->
+            </div>
+            <div class="p-5 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-slate-800">
+                <div>
+                    <span id="lightbox-cat" class="px-2.5 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange text-[10px] font-bold uppercase tracking-wider">CATEGORY</span>
+                    <h3 id="lightbox-title" class="text-lg font-black font-logo text-white mt-1">Project Title</h3>
+                    <p id="lightbox-desc" class="text-xs text-slate-400 mt-0.5">Project details</p>
+                </div>
+                <a id="lightbox-whatsapp-btn" href="#" target="_blank" class="shrink-0 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-2 transition">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>ऐसा डिज़ाइन बनवाएं (WhatsApp)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. ADMIN MODAL (WITH COMPRESSION, YOUTUBE CONVERTER, DATA EXPORT/IMPORT & DELETE) -->
     <div id="admin-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl p-6 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             
@@ -480,9 +670,9 @@
                 <form onsubmit="verifyAdminPasscode(event)" class="space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase mb-1">पासकोड दर्ज करें (Default: 1234)</label>
-                        <input type="password" id="admin-passcode" required placeholder="Enter Passcode..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange">
+                        <input type="password" id="admin-passcode" required placeholder="Enter Passcode..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                     </div>
-                    <button type="submit" class="w-full py-3 bg-brand-dark hover:bg-slate-900 text-white font-bold rounded-xl text-xs uppercase tracking-wider">
+                    <button type="submit" class="w-full py-3.5 bg-brand-dark hover:bg-slate-900 text-white font-bold rounded-xl text-xs uppercase tracking-wider shadow-md transition">
                         Login & Manage Gallery
                     </button>
                 </form>
@@ -493,18 +683,20 @@
                 <div class="flex justify-between items-center mb-4 border-b pb-3">
                     <div>
                         <h3 class="text-lg font-black font-logo text-slate-900">Admin Control Panel</h3>
-                        <span class="text-[10px] text-emerald-600 font-bold">● Logged in as Owner</span>
+                        <span class="text-[10px] text-emerald-600 font-bold flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Logged in as Owner
+                        </span>
                     </div>
                     <button onclick="closeAdminModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
                 </div>
 
                 <!-- Admin Tabs -->
                 <div class="flex gap-2 mb-5 border-b pb-3">
-                    <button onclick="switchAdminTab('upload')" id="tab-btn-upload" class="flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white">
+                    <button onclick="switchAdminTab('upload')" id="tab-btn-upload" class="flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white transition">
                         + नया अपलोड करें
                     </button>
-                    <button onclick="switchAdminTab('manage')" id="tab-btn-manage" class="flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border">
-                        🗑️ प्रोजेक्ट्स हटाएं (Delete)
+                    <button onclick="switchAdminTab('manage')" id="tab-btn-manage" class="flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border transition">
+                        🗑️ प्रोजेक्ट्स सूची / हटाएं
                     </button>
                 </div>
 
@@ -512,12 +704,12 @@
                 <div id="admin-upload-view">
                     <form onsubmit="handleProjectUpload(event)" class="space-y-3.5">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">प्रोजेक्ट टाइटल</label>
-                            <input type="text" id="upload-title" required placeholder="उदा. Luxury Interior Villa, Bharatpur" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">प्रोजेक्ट टाइटल *</label>
+                            <input type="text" id="upload-title" required placeholder="उदा. Luxury Villa Elevation, Saras Circle, Bharatpur" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">केटेगरी</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">केटेगरी *</label>
                             <select id="upload-cat" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange font-semibold">
                                 <option value="interior">लक्ज़री इंटीरियर (Interior)</option>
                                 <option value="woodwork">डोर्स & वॉर्डरोब (Woodwork)</option>
@@ -527,23 +719,24 @@
                         </div>
 
                         <div class="p-3.5 rounded-2xl bg-orange-50/70 border-2 border-dashed border-brand-orange/40 text-center">
-                            <label class="block text-xs font-bold text-brand-orangeDark uppercase mb-1">📱 फोन/कंप्यूटर से फोटो चुनें:</label>
-                            <input type="file" id="upload-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-brand-dark file:text-white">
+                            <label class="block text-xs font-bold text-brand-orangeDark uppercase mb-1">📱 फोन / कंप्यूटर से फोटो अपलोड करें:</label>
+                            <input type="file" id="upload-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-brand-dark file:text-white cursor-pointer">
+                            <p class="text-[10px] text-slate-400 mt-1">✓ ऑटो-कंप्रेशन चालू है (ब्राउज़र स्लो नहीं होगा)</p>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">या Image / YouTube URL</label>
-                            <input type="url" id="upload-url" placeholder="https://..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">या Image URL / YouTube Video URL</label>
+                            <input type="url" id="upload-url" placeholder="https://... या YouTube लिंक" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">विवरण</label>
-                            <input type="text" id="upload-desc" placeholder="उदा. Work done by Space INNOVARE" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">विवरण (Description)</label>
+                            <input type="text" id="upload-desc" placeholder="उदा. Italian Marble & Warm Illumination" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange">
                         </div>
 
                         <div class="pt-2 flex gap-2">
-                            <button type="button" onclick="closeAdminModal()" class="flex-1 py-2.5 rounded-xl bg-slate-100 text-slate-700 text-xs font-bold">Cancel</button>
-                            <button type="submit" class="flex-1 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white text-xs font-bold shadow-md">Upload & Live</button>
+                            <button type="button" onclick="closeAdminModal()" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition">Cancel</button>
+                            <button type="submit" id="upload-submit-btn" class="flex-1 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeDark text-white text-xs font-bold shadow-md transition">Upload & Live</button>
                         </div>
                     </form>
                 </div>
@@ -552,7 +745,10 @@
                 <div id="admin-manage-view" class="hidden">
                     <div class="flex justify-between items-center mb-3">
                         <span class="text-xs font-bold text-slate-600">कुल लाइव प्रोजेक्ट्स: <span id="total-projects-count" class="text-brand-orange font-bold">0</span></span>
-                        <button onclick="resetToDefaultProjects()" class="text-[11px] text-red-600 underline font-semibold">डिफ़ॉल्ट रीसेट करें</button>
+                        <div class="flex gap-2">
+                            <button onclick="exportProjectsData()" class="text-[11px] text-brand-orange font-semibold hover:underline">Backup JSON</button>
+                            <button onclick="resetToDefaultProjects()" class="text-[11px] text-red-600 font-semibold hover:underline">डिफ़ॉल्ट रीसेट</button>
+                        </div>
                     </div>
 
                     <div id="admin-projects-list" class="space-y-2.5 max-h-80 overflow-y-auto pr-1">
@@ -565,7 +761,23 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
+        // Initialize Icons
         lucide.createIcons();
+
+        // Toast notifications
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const bgClass = type === 'error' ? 'bg-red-600' : (type === 'success' ? 'bg-emerald-600' : 'bg-brand-dark');
+            toast.className = `${bgClass} text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-xl animate-fade-in flex items-center gap-2 pointer-events-auto`;
+            toast.innerHTML = `<span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
 
         // 1. Initial Real Projects
         const defaultProjects = [
@@ -575,7 +787,7 @@
                 cat: "interior",
                 type: "image",
                 url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
-                desc: "Italian Marble Flooring, False Ceiling & Chandelier Finishing, Bharatpur"
+                desc: "Italian Marble Flooring, False Ceiling & Chandelier Finishing, Saras Circle, Bharatpur"
             },
             {
                 id: 2,
@@ -599,11 +811,11 @@
                 cat: "3d",
                 type: "image",
                 url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-                desc: "Contemporary Multi-Storey Facade with Warm Illumination, Bharatpur"
+                desc: "Contemporary Multi-Storey Facade with Warm Illumination, NH 21, Bharatpur"
             },
             {
                 id: 5,
-                title: "3D Villa Walkthrough Video",
+                title: "3D Villa Walkthrough Tour",
                 cat: "video",
                 type: "video",
                 url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -611,43 +823,61 @@
             }
         ];
 
-        let liveProjects = JSON.parse(localStorage.getItem('space_innovare_final_v4')) || defaultProjects;
+        let currentGalleryFilter = 'all';
+        let liveProjects = JSON.parse(localStorage.getItem('space_innovare_final_v6')) || defaultProjects;
 
-        function renderGallery(filter = 'all') {
+        // Parse YouTube links into embed URLs
+        function parseYoutubeUrl(url) {
+            if (!url) return url;
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            if (match && match[2].length === 11) {
+                return `https://www.youtube.com/embed/${match[2]}`;
+            }
+            return url;
+        }
+
+        // Render Gallery
+        function renderGallery(filter = currentGalleryFilter) {
+            currentGalleryFilter = filter;
             const grid = document.getElementById('gallery-grid');
             grid.innerHTML = '';
 
             const filtered = filter === 'all' ? liveProjects : liveProjects.filter(p => p.cat === filter);
 
             if (filtered.length === 0) {
-                grid.innerHTML = `<div class="col-span-3 text-center py-12 text-slate-400 text-sm">इस केटेगरी में कोई प्रोजेक्ट नहीं है।</div>`;
+                grid.innerHTML = `<div class="col-span-1 sm:col-span-2 lg:col-span-3 text-center py-16 text-slate-400 text-sm">इस केटेगरी में कोई प्रोजेक्ट नहीं है।</div>`;
                 return;
             }
 
             filtered.forEach((p) => {
                 const card = document.createElement('div');
-                card.className = "rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 relative group";
+                card.className = "rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 relative group flex flex-col";
 
                 let deleteOnCard = isAdminLoggedIn ? `
-                    <button onclick="deleteProject(${p.id})" class="absolute top-3 left-3 z-20 px-2.5 py-1 bg-red-600 text-white rounded-lg text-[11px] font-bold shadow-lg flex items-center gap-1 hover:bg-red-700">
+                    <button onclick="event.stopPropagation(); deleteProject(${p.id})" class="absolute top-3 left-3 z-20 px-2.5 py-1 bg-red-600 text-white rounded-lg text-[11px] font-bold shadow-lg flex items-center gap-1 hover:bg-red-700 transition">
                         <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Delete
                     </button>
                 ` : '';
 
                 let mediaHtml = '';
                 if (p.type === 'video') {
-                    if (p.url.includes('youtube.com') || p.url.includes('youtu.be')) {
-                        mediaHtml = `<iframe src="${p.url}" class="w-full h-56 object-cover" frameborder="0" allowfullscreen></iframe>`;
+                    const embedUrl = parseYoutubeUrl(p.url);
+                    if (embedUrl.includes('youtube.com') || embedUrl.includes('youtu.be')) {
+                        mediaHtml = `<div class="relative w-full h-56 bg-black">${deleteOnCard}<iframe src="${embedUrl}" class="w-full h-56 object-cover" frameborder="0" allowfullscreen></iframe></div>`;
                     } else {
-                        mediaHtml = `<video src="${p.url}" controls class="w-full h-56 object-cover"></video>`;
+                        mediaHtml = `<div class="relative w-full h-56 bg-black">${deleteOnCard}<video src="${embedUrl}" controls class="w-full h-56 object-cover"></video></div>`;
                     }
                 } else {
                     mediaHtml = `
-                        <div class="overflow-hidden h-56 relative">
+                        <div class="overflow-hidden h-56 relative cursor-pointer bg-slate-100" onclick="openLightbox(${p.id})">
                             ${deleteOnCard}
-                            <img src="${p.url}" alt="${p.title}" class="w-full h-full object-cover">
-                            <div class="absolute top-3 right-3 px-2.5 py-0.5 bg-brand-dark/85 text-brand-orange text-[10px] font-extrabold uppercase rounded-full backdrop-blur-sm">
+                            <img src="${p.url}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-3 right-3 px-2.5 py-0.5 bg-brand-dark/85 text-brand-orange text-[10px] font-extrabold uppercase rounded-full backdrop-blur-sm shadow">
                                 ${p.cat.toUpperCase()}
+                            </div>
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <span class="p-2 rounded-full bg-white/90 text-slate-900 shadow-lg"><i data-lucide="zoom-in" class="w-5 h-5"></i></span>
                             </div>
                         </div>
                     `;
@@ -655,9 +885,17 @@
 
                 card.innerHTML = `
                     ${mediaHtml}
-                    <div class="p-4 sm:p-5">
-                        <h4 class="font-bold text-slate-900 text-base font-logo">${p.title}</h4>
-                        <p class="text-xs text-slate-500 mt-1">${p.desc}</p>
+                    <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base font-logo group-hover:text-brand-orange transition">${p.title}</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">${p.desc || ''}</p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-700">
+                            <span class="text-brand-orange uppercase text-[10px]">${p.cat}</span>
+                            <a href="https://wa.me/919910007412?text=I%20am%20interested%20in%20project:%20${encodeURIComponent(p.title)}" target="_blank" class="text-slate-500 hover:text-emerald-600 flex items-center gap-1 transition">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> पूछें
+                            </a>
+                        </div>
                     </div>
                 `;
                 grid.appendChild(card);
@@ -665,15 +903,62 @@
             lucide.createIcons();
         }
 
-        function filterGallery(cat) {
-            document.querySelectorAll('.gallery-tab').forEach(t => {
-                t.className = 'gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700';
+        // Filter tab selection
+        function filterGallery(cat, btnElement) {
+            document.querySelectorAll('#gallery-tabs-container .gallery-tab').forEach(t => {
+                t.className = 'gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition';
             });
-            event.target.className = 'gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-brand-dark text-white shadow-sm';
+            if (btnElement) {
+                btnElement.className = 'gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-brand-dark text-white shadow-sm transition';
+            }
             renderGallery(cat);
         }
 
-        // 2. Admin Modal Logic
+        // 2. Lightbox Preview
+        function openLightbox(id) {
+            const project = liveProjects.find(p => p.id === id);
+            if (!project) return;
+
+            const modal = document.getElementById('lightbox-modal');
+            const mediaBox = document.getElementById('lightbox-media');
+            const titleEl = document.getElementById('lightbox-title');
+            const descEl = document.getElementById('lightbox-desc');
+            const catEl = document.getElementById('lightbox-cat');
+            const waBtn = document.getElementById('lightbox-whatsapp-btn');
+
+            titleEl.innerText = project.title;
+            descEl.innerText = project.desc || 'Space INNOVARE Premium Design';
+            catEl.innerText = project.cat.toUpperCase();
+            waBtn.href = `https://wa.me/919910007412?text=नमस्ते%20Space%20INNOVARE,%20मुझे%20आपके%20प्रोजेक्ट%20"${encodeURIComponent(project.title)}"%20जैसा%20डिज़ाइन%20बनवाना%20है।`;
+
+            if (project.type === 'video') {
+                const embedUrl = parseYoutubeUrl(project.url);
+                mediaBox.innerHTML = `<iframe src="${embedUrl}" class="w-full h-[55vh] max-h-[500px]" frameborder="0" allowfullscreen></iframe>`;
+            } else {
+                mediaBox.innerHTML = `<img src="${project.url}" alt="${project.title}" class="max-h-[65vh] w-auto object-contain mx-auto">`;
+            }
+
+            modal.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.getElementById('lightbox-media').innerHTML = '';
+        }
+
+        // Close modal on Escape key or outside click
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                closeAdminModal();
+            }
+        });
+        document.getElementById('lightbox-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox-modal') closeLightbox();
+        });
+
+        // 3. Admin Modal Logic
         let isAdminLoggedIn = false;
 
         function openAdminModal() {
@@ -701,9 +986,10 @@
                 document.getElementById('admin-dashboard-box').classList.remove('hidden');
                 document.getElementById('admin-status-indicator').innerText = "● Admin Mode Active: आप सीधे फोटो पर Delete बटन दबाकर भी हटा सकते हैं।";
                 renderAdminManageList();
-                renderGallery('all');
+                renderGallery(currentGalleryFilter);
+                showToast("सफलतापूर्वक लॉगिन हुआ!", "success");
             } else {
-                alert('गलत पासकोड! (Default: 1234)');
+                showToast("गलत पासकोड! (Default: 1234)", "error");
             }
         }
 
@@ -711,13 +997,13 @@
             if (tab === 'upload') {
                 document.getElementById('admin-upload-view').classList.remove('hidden');
                 document.getElementById('admin-manage-view').classList.add('hidden');
-                document.getElementById('tab-btn-upload').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white";
-                document.getElementById('tab-btn-manage').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border";
+                document.getElementById('tab-btn-upload').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white transition";
+                document.getElementById('tab-btn-manage').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border transition";
             } else {
                 document.getElementById('admin-upload-view').classList.add('hidden');
                 document.getElementById('admin-manage-view').classList.remove('hidden');
-                document.getElementById('tab-btn-manage').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white";
-                document.getElementById('tab-btn-upload').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border";
+                document.getElementById('tab-btn-manage').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-brand-orange text-white transition";
+                document.getElementById('tab-btn-upload').className = "flex-1 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border transition";
                 renderAdminManageList();
             }
         }
@@ -728,11 +1014,16 @@
             document.getElementById('total-projects-count').innerText = liveProjects.length;
             list.innerHTML = '';
 
+            if (liveProjects.length === 0) {
+                list.innerHTML = `<div class="text-center py-6 text-slate-400 text-xs">कोई प्रोजेक्ट्स मौजूद नहीं हैं।</div>`;
+                return;
+            }
+
             liveProjects.forEach(p => {
                 const item = document.createElement('div');
                 item.className = "flex items-center justify-between gap-3 p-2.5 rounded-xl border border-slate-200 bg-slate-50";
                 
-                let thumb = p.type === 'video' ? '📹' : `<img src="${p.url}" class="w-10 h-10 rounded-lg object-cover">`;
+                let thumb = p.type === 'video' ? '<div class="w-10 h-10 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xs">📹</div>' : `<img src="${p.url}" class="w-10 h-10 rounded-lg object-cover">`;
 
                 item.innerHTML = `
                     <div class="flex items-center gap-3 overflow-hidden">
@@ -756,71 +1047,153 @@
         function deleteProject(id) {
             if (confirm("क्या आप वाकई इस प्रोजेक्ट/फोटो को हटाना चाहते हैं?")) {
                 liveProjects = liveProjects.filter(p => p.id !== id);
-                localStorage.setItem('space_innovare_final_v4', JSON.stringify(liveProjects));
-                renderGallery('all');
+                localStorage.setItem('space_innovare_final_v6', JSON.stringify(liveProjects));
+                renderGallery(currentGalleryFilter);
                 renderAdminManageList();
+                showToast("प्रोजेक्ट सफलतापूर्वक हटा दिया गया।", "info");
             }
         }
 
         // Reset to default
         function resetToDefaultProjects() {
-            if (confirm("क्या आप शुरुआत की सभी ओरिजिनल फोटोज़ वापस लाना चाहते हैं?")) {
+            if (confirm("क्या आप शुरुआत की सभी डिफ़ॉल्ट फोटोज़ वापस लाना चाहते हैं?")) {
                 liveProjects = [...defaultProjects];
-                localStorage.setItem('space_innovare_final_v4', JSON.stringify(liveProjects));
-                renderGallery('all');
+                localStorage.setItem('space_innovare_final_v6', JSON.stringify(liveProjects));
+                renderGallery(currentGalleryFilter);
                 renderAdminManageList();
+                showToast("डिफ़ॉल्ट प्रोजेक्ट्स रीस्टोर हो गए!", "success");
             }
         }
 
-        // Upload Project
-        function handleProjectUpload(e) {
-            e.preventDefault();
-            const title = document.getElementById('upload-title').value;
-            const cat = document.getElementById('upload-cat').value;
-            const desc = document.getElementById('upload-desc').value || 'Space INNOVARE Project';
-            const fileInput = document.getElementById('upload-file');
-            const urlInput = document.getElementById('upload-url').value;
+        // Backup export JSON
+        function exportProjectsData() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(liveProjects, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `space_innovare_projects_${Date.now()}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
 
-            if (fileInput.files && fileInput.files[0]) {
+        // Image compression helper to prevent localStorage quota crash
+        function compressImage(file, maxWidth = 1000, quality = 0.7) {
+            return new Promise((resolve, reject) => {
                 const reader = new FileReader();
-                reader.onload = function(event) {
-                    saveAndRender(title, cat, 'image', event.target.result, desc);
+                reader.readAsDataURL(file);
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.src = event.target.result;
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        let width = img.width;
+                        let height = img.height;
+
+                        if (width > maxWidth) {
+                            height = Math.round((height * maxWidth) / width);
+                            width = maxWidth;
+                        }
+
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, width, height);
+                        resolve(canvas.toDataURL('image/jpeg', quality));
+                    };
+                    img.onerror = reject;
                 };
-                reader.readAsDataURL(fileInput.files[0]);
-            } else if (urlInput) {
-                const isVideo = cat === 'video' || urlInput.includes('youtube') || urlInput.includes('youtu.be');
-                saveAndRender(title, cat, isVideo ? 'video' : 'image', urlInput, desc);
-            } else {
-                alert('कृपया कोई फोटो चुनें या लिंक डालें!');
+                reader.onerror = reject;
+            });
+        }
+
+        // Upload Project
+        async function handleProjectUpload(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('upload-submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerText = "अपलोड हो रहा है...";
+
+            try {
+                const title = document.getElementById('upload-title').value;
+                const cat = document.getElementById('upload-cat').value;
+                const desc = document.getElementById('upload-desc').value || 'Space INNOVARE Project';
+                const fileInput = document.getElementById('upload-file');
+                const urlInput = document.getElementById('upload-url').value;
+
+                if (fileInput.files && fileInput.files[0]) {
+                    const compressedDataUrl = await compressImage(fileInput.files[0]);
+                    saveAndRender(title, cat, 'image', compressedDataUrl, desc);
+                } else if (urlInput) {
+                    const isVideo = cat === 'video' || urlInput.includes('youtube') || urlInput.includes('youtu.be');
+                    const finalUrl = isVideo ? parseYoutubeUrl(urlInput) : urlInput;
+                    saveAndRender(title, cat, isVideo ? 'video' : 'image', finalUrl, desc);
+                } else {
+                    showToast('कृपया कोई फोटो चुनें या लिंक दर्ज करें!', 'error');
+                }
+            } catch (err) {
+                console.error(err);
+                showToast('अपलोड करने में त्रुटि हुई!', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Upload & Live";
             }
         }
 
         function saveAndRender(title, cat, type, url, desc) {
             liveProjects.unshift({ id: Date.now(), title, cat, type, url, desc });
-            localStorage.setItem('space_innovare_final_v4', JSON.stringify(liveProjects));
-            renderGallery('all');
+            try {
+                localStorage.setItem('space_innovare_final_v6', JSON.stringify(liveProjects));
+            } catch (e) {
+                showToast('ब्राउज़र स्टोरेज फुल है। कृपया कुछ पुरानी फोटो डिलीट करें।', 'error');
+                return;
+            }
+            renderGallery(currentGalleryFilter);
             closeAdminModal();
-            alert('प्रोजेक्ट सफलतापूर्वक वेबसाइट पर लाइव हो गया!');
+            showToast('प्रोजेक्ट सफलतापूर्वक वेबसाइट पर लाइव हो गया!', 'success');
+            // reset form
+            document.getElementById('upload-title').value = '';
+            document.getElementById('upload-url').value = '';
+            document.getElementById('upload-desc').value = '';
+            document.getElementById('upload-file').value = '';
         }
 
-        // Budget Estimator
+        // 4. Budget Estimator
         function calculateBudget() {
             const sqft = parseInt(document.getElementById('est-sqft').value);
             const service = document.getElementById('est-service').value;
             document.getElementById('sqft-display').innerText = `${sqft.toLocaleString('en-IN')} Sq. Ft.`;
 
-            let rate = 25;
-            if (service === 'architecture') rate = 25;
-            else if (service === 'interior') rate = 950;
-            else if (service === 'turnkey') rate = 1950;
+            let rateMin = 25;
+            let rateMax = 35;
 
-            const minCost = sqft * rate;
-            const maxCost = Math.round(minCost * 1.25);
+            if (service === 'architecture') {
+                rateMin = 25;
+                rateMax = 35;
+            } else if (service === 'interior') {
+                rateMin = 950;
+                rateMax = 1200;
+            } else if (service === 'turnkey') {
+                rateMin = 1950;
+                rateMax = 2400;
+            }
+
+            const minCost = sqft * rateMin;
+            const maxCost = sqft * rateMax;
 
             document.getElementById('estimated-cost').innerText = `₹${minCost.toLocaleString('en-IN')} - ₹${maxCost.toLocaleString('en-IN')}`;
         }
 
-        // Contact to WhatsApp
+        function sendBudgetToWhatsApp() {
+            const sqft = document.getElementById('est-sqft').value;
+            const serviceSelect = document.getElementById('est-service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+            const cost = document.getElementById('estimated-cost').innerText;
+
+            const text = `*Space INNOVARE Budget Estimate Inquiry*%0A%0A*सेवा:* ${encodeURIComponent(serviceText)}%0A*एरिया:* ${sqft} Sq. Ft.%0A*अनुमानित लागत:* ${encodeURIComponent(cost)}%0A%0Aनमस्ते Space INNOVARE, कृपया मेरे प्रोजेक्ट के लिए आगे की चर्चा और साइट विज़िट का समय निर्धारित करें।`;
+            window.open(`https://wa.me/919910007412?text=${text}`, '_blank');
+        }
+
+        // 5. Contact Form to WhatsApp
         function handleContact(e) {
             e.preventDefault();
             const name = document.getElementById('cust-name').value;
@@ -828,7 +1201,7 @@
             const city = document.getElementById('cust-city').value;
             const req = document.getElementById('cust-req').value;
 
-            const phoneTarget = "919319181300";
+            const phoneTarget = "919910007412";
             const text = `*New Consultation Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*City:* ${encodeURIComponent(city)}%0A*Service:* ${encodeURIComponent(req)}`;
 
             window.open(`https://wa.me/${phoneTarget}?text=${text}`, '_blank');
