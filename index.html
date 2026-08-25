@@ -100,17 +100,17 @@
         </div>
     </div>
 
-    <!-- 2. MAIN NAVBAR WITH ORIGINAL LOGO -->
+    <!-- 2. MAIN NAVBAR (LOGO ONLY) -->
     <header class="sticky top-0 z-40 bg-[#0a0d14] border-b border-slate-800 shadow-lg transition">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             
-            <!-- ORIGINAL LOGO EMBEDDED -->
+            <!-- ORIGINAL LOGO ONLY -->
             <a href="#" class="flex items-center group py-1" title="SPACE INNOVARE - Crafting Dream Spaces">
-                <div class="flex items-center transition group-hover:opacity-95">
-                    <svg class="h-12 sm:h-14 w-auto" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="flex items-center transition transform group-hover:scale-105">
+                    <svg class="h-11 sm:h-13 w-auto" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <!-- Orange House Outline -->
                         <path d="M 68 30 L 38 6 L 8 30 L 8 86 L 75 86" stroke="#f97316" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <!-- Typography matching the original logo -->
+                        <!-- Logo Typography -->
                         <text x="86" y="32" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="23" font-weight="600" letter-spacing="4">SPACE</text>
                         <text x="84" y="67" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="34" font-weight="900" letter-spacing="2">INNOVARE</text>
                         <text x="86" y="88" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">CRAFTING DREAM SPACES</text>
@@ -118,7 +118,7 @@
                 </div>
             </a>
 
-            <!-- Desktop Links -->
+            <!-- Desktop Navigation Links -->
             <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-300">
                 <a href="#services" class="hover:text-brand-orange transition">सेवाएं (Services)</a>
                 <a href="#portfolio" class="hover:text-brand-orange transition">रियल प्रोजेक्ट्स</a>
@@ -649,7 +649,7 @@
         </div>
     </section>
 
-    <!-- 9. FOOTER WITH ORIGINAL LOGO -->
+    <!-- 9. FOOTER (LOGO ONLY) -->
     <footer class="bg-brand-dark text-slate-400 text-xs py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3 text-center sm:text-left">
@@ -876,7 +876,7 @@
             renderGallery();
         }
 
-        // 2. YOUTUBE / VIDEO URL NORMALIZER (Handles standard links, youtu.be, and Shorts)
+        // 2. YOUTUBE / VIDEO URL NORMALIZER
         function formatVideoEmbedUrl(url) {
             if (!url) return '';
             url = url.trim();
@@ -895,7 +895,7 @@
             return url;
         }
 
-        // 3. SMART CLIENT-SIDE IMAGE COMPRESSION (Quickly compresses phone camera photos)
+        // 3. SMART CLIENT-SIDE IMAGE COMPRESSION
         function compressImageFile(file, maxDimension, quality, callback) {
             const reader = new FileReader();
             reader.onload = function(e) {
