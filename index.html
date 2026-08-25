@@ -124,7 +124,7 @@
                 <a href="#contact" class="hover:text-brand-red transition">संपर्क</a>
             </nav>
 
-            <!-- Buttons -->
+            <!-- Right Buttons -->
             <div class="flex items-center gap-2 sm:gap-3">
                 <button onclick="openAdminModal()" id="nav-admin-btn" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Admin View">
                     <i data-lucide="shield-check" class="w-3.5 h-3.5 text-slate-600"></i>
@@ -181,7 +181,7 @@
                                 <span class="text-[10px] text-slate-300">Saras Circle, NH 21, Bharatpur</span>
                             </div>
                             <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-full border border-emerald-500/30 flex items-center gap-1">
-                                <i data-lucide="check-circle" class="w-3 h-3"></i> 100% Vastu
+                                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 100% Vastu
                             </span>
                         </div>
                     </div>
@@ -411,13 +411,13 @@
         </div>
     </section>
 
-    <!-- 5. REAL PROJECTS & VIDEOS (DYNAMIC LIVE GALLERY WITH ADMIN & CLOUD UPLOAD) -->
+    <!-- 5. REAL PROJECTS & YOUTUBE LINKS (DYNAMIC GALLERY WITH DIRECT CLOUD UPLOADER) -->
     <section id="portfolio" class="py-16 bg-slate-100/80 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
                 <div>
                     <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">Real Execution</span>
-                    <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">हमारे रियल प्रोजेक्ट्स & वीडियो</h2>
+                    <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">हमारे रियल प्रोजेक्ट्स & वीडियो लिंक्स</h2>
                     <p id="admin-status-indicator" class="text-xs text-slate-500 mt-1">हमारे द्वारा पूरे किए गए कार्य का वास्तविक विवरण</p>
                 </div>
                 
@@ -434,7 +434,7 @@
                 <button onclick="filterGallery('interior', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">लक्ज़री इंटीरियर</button>
                 <button onclick="filterGallery('woodwork', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">डोर्स & वॉर्डरोब</button>
                 <button onclick="filterGallery('3d', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">3D एलिवेशन</button>
-                <button onclick="filterGallery('video', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">वीडियो (Video Tours)</button>
+                <button onclick="filterGallery('video', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">वीडियो लिंक्स (YouTube)</button>
             </div>
 
             <!-- Dynamic Project Grid (Rendered by JS) -->
@@ -687,15 +687,15 @@
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
 
-            <!-- STEP 1: PASSWORD AUTHENTICATION -->
+            <!-- STEP 1: PASSWORD AUTHENTICATION (WITHOUT HINT) -->
             <div id="admin-auth-section">
                 <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-3">
                     <i data-lucide="lock" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 font-logo">एडमिन वेरिफिकेशन (Admin Login)</h3>
-                <p class="text-xs text-slate-500 mt-1 mb-4">प्रोजेक्ट्स बदलने, फोटो रिप्लेस करने या नया जोड़ने के लिए PIN दर्ज करें (Default: <strong>1234</strong>)</p>
+                <p class="text-xs text-slate-500 mt-1 mb-4">प्रोजेक्ट्स बदलने, फोटो रिप्लेस करने या नया जोड़ने के लिए PIN दर्ज करें</p>
                 
-                <input type="password" id="admin-pin" placeholder="Enter Admin PIN (1234)" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-red-500">
+                <input type="password" id="admin-pin" placeholder="Enter Admin PIN" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-red-500">
                 
                 <button onclick="verifyAdmin()" class="w-full bg-slate-950 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-md transition">
                     लॉगिन करें (Verify PIN)
@@ -707,7 +707,7 @@
                 <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
                     <div>
                         <h3 id="form-title" class="text-lg font-black text-slate-900 font-logo">नया प्रोजेक्ट जोड़ें</h3>
-                        <p class="text-[11px] text-slate-500">फोटो या वीडियो अपलोड / तुरंत रिप्लेस करें</p>
+                        <p class="text-[11px] text-slate-500">फोटो या यूट्यूब लिंक तुरंत अपडेट करें</p>
                     </div>
                     <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-full">
                         Admin Active
@@ -729,7 +729,7 @@
                                 <option value="interior">लक्ज़री इंटीरियर</option>
                                 <option value="woodwork">डोर्स & वॉर्डरोब</option>
                                 <option value="3d">3D एलिवेशन</option>
-                                <option value="video">वीडियो (Video Tour)</option>
+                                <option value="video">वीडियो (YouTube Link)</option>
                             </select>
                         </div>
 
@@ -737,7 +737,7 @@
                             <label class="text-xs font-bold text-slate-700">मीडिया प्रकार (Type)</label>
                             <select id="proj-type" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mt-1 focus:outline-none focus:border-red-500" onchange="toggleMediaType()">
                                 <option value="image">फोटो (Photo)</option>
-                                <option value="video">वीडियो (YouTube Link / Shorts)</option>
+                                <option value="video">YouTube वीडियो लिंक (Link)</option>
                             </select>
                         </div>
                     </div>
@@ -759,7 +759,7 @@
                             </span>
                         </label>
                         <input type="file" id="proj-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-red-600 file:text-white hover:file:bg-red-700 cursor-pointer" onchange="handleCloudFileUpload(event)">
-                        <span id="upload-note" class="text-[10px] text-slate-500 block mt-1">✓ फोटो अपने आप क्लाउड पर सुरक्षित अपलोड होगी</span>
+                        <span id="upload-note" class="text-[10px] text-slate-500 block mt-1">✓ फोटो सीधे क्लाउड पर अपलोड होगी</span>
                     </div>
 
                     <div>
@@ -805,7 +805,7 @@
     <!-- JAVASCRIPT LOGIC (GALLERY, CLOUD HOSTING, LIVE REPLACE)  -->
     <!-- ======================================================== -->
     <script>
-        // 1. DEFAULT PROJECTS WITH REAL KITCHEN IMAGE
+        // 1. DEFAULT PROJECTS WITH REAL KITCHEN & YOUTUBE LINK
         const defaultProjects = [
             {
                 id: "p1",
@@ -837,16 +837,16 @@
                 category: "interior",
                 type: "image",
                 location: "Space INNOVARE Site, भरतपुर",
-                // Real Modular Kitchen Project Image
+                // Official Luxury Modular Kitchen
                 url: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80"
             },
             {
                 id: "p5",
-                title: "विला कंस्ट्रक्शन & एलिवेशन 3D वॉकथ्रू",
+                title: "विला कंस्ट्रक्शन & एलिवेशन 3D वॉकथ्रू (YouTube Video)",
                 category: "video",
                 type: "video",
                 location: "Space INNOVARE Project",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             },
             {
                 id: "p6",
@@ -860,7 +860,7 @@
 
         let projects = [];
         try {
-            const stored = localStorage.getItem("space_innovare_projects_v2");
+            const stored = localStorage.getItem("space_innovare_projects_v3");
             projects = stored ? JSON.parse(stored) : defaultProjects;
         } catch (e) {
             projects = defaultProjects;
@@ -872,7 +872,7 @@
         function saveAllToStorage(dataList) {
             projects = dataList;
             try {
-                localStorage.setItem("space_innovare_projects_v2", JSON.stringify(projects));
+                localStorage.setItem("space_innovare_projects_v3", JSON.stringify(projects));
             } catch (err) {
                 console.error("Storage error", err);
                 showToast("लोकल स्टोरेज फुल है, कृपया अनावश्यक फोटो हटाएं!", "error");
@@ -880,26 +880,42 @@
             renderGallery();
         }
 
-        // 2. YOUTUBE / VIDEO URL NORMALIZER (Auto converts Shorts and Watch Links)
-        function formatVideoEmbedUrl(url) {
+        // 2. YOUTUBE THUMBNAIL & LINK NORMALIZERS
+        function getYouTubeId(url) {
             if (!url) return '';
             url = url.trim();
             if (url.includes('youtube.com/shorts/')) {
-                const vid = url.split('youtube.com/shorts/')[1].split('?')[0].split('/')[0];
-                return `https://www.youtube.com/embed/${vid}`;
+                return url.split('youtube.com/shorts/')[1].split('?')[0].split('/')[0];
             }
             if (url.includes('youtu.be/')) {
-                const vid = url.split('youtu.be/')[1].split('?')[0].split('/')[0];
-                return `https://www.youtube.com/embed/${vid}`;
+                return url.split('youtu.be/')[1].split('?')[0].split('/')[0];
             }
             if (url.includes('watch?v=')) {
-                const vid = url.split('watch?v=')[1].split('&')[0];
-                return `https://www.youtube.com/embed/${vid}`;
+                return url.split('watch?v=')[1].split('&')[0];
             }
-            return url;
+            if (url.includes('/embed/')) {
+                return url.split('/embed/')[1].split('?')[0];
+            }
+            return '';
         }
 
-        // 3. CLOUD IMAGE UPLOAD HANDLER (Fast Compression + Direct Free Cloud Upload)
+        function getYouTubeThumbnail(url) {
+            const vid = getYouTubeId(url);
+            if (vid) {
+                return `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+            }
+            return url || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80';
+        }
+
+        function getYouTubeDirectUrl(url) {
+            const vid = getYouTubeId(url);
+            if (vid) {
+                return `https://www.youtube.com/watch?v=${vid}`;
+            }
+            return url || '#';
+        }
+
+        // 3. CLOUD IMAGE UPLOAD HANDLER
         async function handleCloudFileUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
@@ -907,14 +923,12 @@
             const badge = document.getElementById("upload-status-badge");
             const note = document.getElementById("upload-note");
             badge.classList.remove("hidden");
-            badge.innerText = "क्लाउड पर अपलोड हो रहा है...";
+            badge.innerText = "अपलोडिंग...";
             note.innerText = "⏳ इमेज कंप्रेस और क्लाउड पर अपलोड की जा रही है...";
 
             try {
-                // 1. Compress Image locally
                 const compressedBase64 = await compressImageToDataUrl(file, 1200, 0.80);
                 
-                // 2. Try direct Cloud Upload to ImgBB free API for permanent CDN URL
                 let cloudUrl = null;
                 try {
                     const formData = new FormData();
@@ -928,10 +942,9 @@
                         cloudUrl = resData.data.url;
                     }
                 } catch (netErr) {
-                    console.warn("Cloud upload network error, using instant base64 fallback:", netErr);
+                    console.warn("Cloud upload fallback to compressed base64:", netErr);
                 }
 
-                // If cloud URL obtained, use it, else fallback to compressed base64
                 const finalUrl = cloudUrl || compressedBase64;
                 document.getElementById("proj-url").value = finalUrl;
                 updateLiveMediaPreview();
@@ -985,7 +998,7 @@
             const urlLabel = document.getElementById("url-label");
             if (type === "video") {
                 fileBox.classList.add("hidden");
-                urlLabel.innerText = "यूट्यूब वीडियो लिंक पेस्ट करें (Watch, Shorts या Embed)";
+                urlLabel.innerText = "यूट्यूब वीडियो लिंक पेस्ट करें (Watch, Shorts या Direct Link)";
             } else {
                 fileBox.classList.remove("hidden");
                 urlLabel.innerText = "या ऑनलाइन इमेज URL पेस्ट करें";
@@ -1006,14 +1019,23 @@
 
             box.classList.remove("hidden");
             if (type === "video") {
-                const embedUrl = formatVideoEmbedUrl(url);
-                content.innerHTML = `<iframe class="w-full h-full" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
+                const thumb = getYouTubeThumbnail(url);
+                content.innerHTML = `
+                    <div class="relative w-full h-full">
+                        <img src="${thumb}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                            <span class="px-3 py-1.5 rounded-xl bg-red-600 text-white font-bold text-xs flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i> YouTube Video Link
+                            </span>
+                        </div>
+                    </div>`;
             } else {
                 content.innerHTML = `<img src="${url}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x200?text=Invalid+Image+URL'">`;
             }
+            lucide.createIcons();
         }
 
-        // 4. RENDER GALLERY CARDS
+        // 4. RENDER GALLERY CARDS (LIGHTWEIGHT WITH YOUTUBE LINKS)
         function renderGallery() {
             const grid = document.getElementById("gallery-grid");
             if (!grid) return;
@@ -1039,12 +1061,30 @@
                 card.className = "bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group";
 
                 let mediaHtml = "";
+                let actionBtnHtml = "";
+
                 if (p.type === "video") {
-                    const embedUrl = formatVideoEmbedUrl(p.url);
+                    const thumb = getYouTubeThumbnail(p.url);
+                    const directUrl = getYouTubeDirectUrl(p.url);
                     mediaHtml = `
-                        <div class="relative w-full aspect-video bg-black">
-                            <iframe class="w-full h-full" src="${embedUrl}" title="${p.title}" frameborder="0" allowfullscreen></iframe>
-                        </div>`;
+                        <a href="${directUrl}" target="_blank" rel="noopener noreferrer" class="relative block w-full h-52 sm:h-60 bg-slate-900 overflow-hidden group/thumb">
+                            <img src="${thumb}" alt="${p.title}" class="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-black/30 group-hover/thumb:bg-black/50 transition flex items-center justify-center">
+                                <div class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-2xl transform group-hover/thumb:scale-110 transition">
+                                    <i data-lucide="play" class="w-7 h-7 fill-white translate-x-0.5"></i>
+                                </div>
+                            </div>
+                            <div class="absolute top-3 left-3">
+                                <span class="px-2.5 py-1 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
+                                    <i data-lucide="youtube" class="w-3 h-3"></i> YouTube
+                                </span>
+                            </div>
+                        </a>`;
+                    
+                    actionBtnHtml = `
+                        <a href="${directUrl}" target="_blank" rel="noopener noreferrer" class="mt-3 w-full py-2 rounded-xl bg-red-50 hover:bg-red-100 text-red-600 font-bold text-xs flex items-center justify-center gap-1.5 border border-red-200 transition">
+                            <i data-lucide="youtube" class="w-3.5 h-3.5"></i> YouTube पर वीडियो देखें
+                        </a>`;
                 } else {
                     mediaHtml = `
                         <div class="relative w-full h-52 sm:h-60 bg-slate-100 overflow-hidden">
@@ -1076,9 +1116,10 @@
                                 <span class="flex items-center gap-1 font-semibold text-red-600">
                                     <i data-lucide="map-pin" class="w-3 h-3"></i> ${p.location || 'Bharatpur • Jaipur • Noida'}
                                 </span>
-                                <span class="uppercase font-bold">${p.type === 'video' ? 'Video Tour' : 'HD Photo'}</span>
+                                <span class="uppercase font-bold">${p.type === 'video' ? 'Video Link' : 'HD Photo'}</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-red-600 transition line-clamp-2">${p.title}</h4>
+                            ${actionBtnHtml}
                             ${adminControls}
                         </div>
                     </div>
@@ -1128,7 +1169,7 @@
                 showToast("एडमिन लॉगिन सफल!", "success");
                 renderGallery();
             } else {
-                showToast("गलत पासवर्ड! कृपया सही पिन दर्ज करें (1234)", "error");
+                showToast("गलत पासवर्ड! कृपया सही पिन दर्ज करें", "error");
             }
         }
 
@@ -1157,10 +1198,6 @@
             if (!url) {
                 showToast("कृपया फोटो चुनें या वीडियो लिंक पेस्ट करें!", "error");
                 return;
-            }
-
-            if (type === "video") {
-                url = formatVideoEmbedUrl(url);
             }
 
             let updatedList = [...projects];
@@ -1220,7 +1257,7 @@
             document.getElementById("save-btn-text").innerText = "सेव करें (Save Live)";
             document.getElementById("preview-box").classList.add("hidden");
             document.getElementById("upload-status-badge").classList.add("hidden");
-            document.getElementById("upload-note").innerText = "✓ फोटो अपने आप क्लाउड पर सुरक्षित अपलोड होगी";
+            document.getElementById("upload-note").innerText = "✓ फोटो सीधे क्लाउड पर अपलोड होगी";
         }
 
         function resetToDefaultData() {
