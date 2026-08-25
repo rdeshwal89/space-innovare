@@ -6,6 +6,9 @@
     <title>SPACE INNOVARE | Crafting Dream Spaces - Architecture & Interior Design | Bharatpur • Jaipur • Noida</title>
     <meta name="description" content="SPACE INNOVARE - Crafting Dream Spaces. Premium Architecture Design, Luxury Interior Design, 3D Elevation & Turnkey Construction in Saras Circle, NH 21, Bharatpur, Jaipur & Noida.">
     
+    <!-- Favicon -->
+    <link rel="icon" id="site-favicon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0d14'/><path d='M30 70 L50 25 L70 70 Z' fill='none' stroke='%23f97316' stroke-width='8'/><circle cx='50' cy='52' r='8' fill='%23f97316'/></svg>">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -21,12 +24,12 @@
                         }
                     },
                     boxShadow: {
-                        'neon-orange': '0 0 25px -5px rgba(249, 115, 22, 0.3)',
-                        'neon-blue': '0 0 25px -5px rgba(59, 130, 246, 0.3)',
-                        'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.3)',
-                        'neon-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.3)',
-                        'neon-amber': '0 0 25px -5px rgba(245, 158, 11, 0.3)',
-                        'neon-rose': '0 0 25px -5px rgba(244, 63, 94, 0.3)',
+                        'neon-orange': '0 0 25px -5px rgba(249, 115, 22, 0.35)',
+                        'neon-blue': '0 0 25px -5px rgba(59, 130, 246, 0.35)',
+                        'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.35)',
+                        'neon-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.35)',
+                        'neon-amber': '0 0 25px -5px rgba(245, 158, 11, 0.35)',
+                        'neon-rose': '0 0 25px -5px rgba(244, 63, 94, 0.35)',
                     }
                 }
             }
@@ -35,10 +38,6 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Firebase Realtime Cloud SDK (For Live Updates) -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 
     <!-- Google Fonts -->
     <style>
@@ -79,7 +78,7 @@
                 <span class="px-2.5 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange font-bold border border-brand-orange/30 text-[10px] tracking-wider">
                     BHARATPUR • JAIPUR • NOIDA
                 </span>
-                <span class="hidden md:inline text-slate-400 text-[11px]">| Saras Circle, NH 21, Bharatpur</span>
+                <span class="hidden md:inline text-slate-400 text-[11px]">| सारस चौराहा, NH 21, भरतपुर</span>
             </div>
             
             <div class="flex items-center gap-3 sm:gap-4 font-semibold text-slate-300 ml-auto flex-wrap">
@@ -105,20 +104,20 @@
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             
-            <!-- LOGO -->
-            <a href="#" class="flex items-center gap-2.5 group py-1" title="Space INNOVARE - Crafting Dream Spaces">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-orange to-amber-500 flex items-center justify-center text-white shadow-md shadow-brand-orange/30 group-hover:scale-105 transition">
-                    <i data-lucide="home" class="w-6 h-6"></i>
+            <!-- BRAND LOGO -->
+            <a href="#" class="flex items-center gap-3 group py-1" title="Space INNOVARE - Crafting Dream Spaces">
+                <div id="nav-logo-container" class="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 p-1 flex items-center justify-center border border-slate-700 shadow-md group-hover:scale-105 transition overflow-hidden">
+                    <img id="header-logo-img" src="" alt="Space INNOVARE Logo" class="w-full h-full object-contain">
                 </div>
                 <div>
                     <span class="text-xl sm:text-2xl font-black font-logo tracking-tight text-slate-950 block leading-none">
                         SPACE <span class="text-brand-orange">INNOVARE</span>
                     </span>
-                    <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mt-0.5">Crafting Dream Spaces</span>
+                    <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mt-1">Crafting Dream Spaces</span>
                 </div>
             </a>
 
-            <!-- Desktop Links -->
+            <!-- Desktop Navigation Links -->
             <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-700">
                 <a href="#services" class="hover:text-brand-orange transition">सेवाएं (Services)</a>
                 <a href="#portfolio" class="hover:text-brand-orange transition">रियल प्रोजेक्ट्स</a>
@@ -192,7 +191,7 @@
                 </div>
             </div>
 
-            <!-- Trust Bar -->
+            <!-- Trust Features Bar -->
             <div class="mt-10 flex gap-3 overflow-x-auto no-scrollbar py-2 text-xs font-bold text-slate-800">
                 <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
                     <div class="w-7 h-7 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
@@ -222,7 +221,7 @@
         </div>
     </section>
 
-    <!-- 4. COLORFUL ARCHITECTURE & INTERIOR SERVICES -->
+    <!-- 4. 6 COLORFUL ARCHITECTURE & INTERIOR SERVICES -->
     <section id="services" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="px-3 py-1 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 text-brand-orangeDark text-[11px] font-extrabold uppercase tracking-wider border border-orange-200 shadow-sm">हमारी प्रमुख सेवाएं</span>
@@ -432,7 +431,7 @@
                 </button>
             </div>
 
-            <!-- Filter Pills -->
+            <!-- Filter Tabs -->
             <div class="flex gap-2 overflow-x-auto no-scrollbar pb-3 mb-6" id="gallery-tabs-container">
                 <button onclick="filterGallery('all', this)" class="gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-brand-dark text-white shadow-sm transition">सभी (All)</button>
                 <button onclick="filterGallery('interior', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">लक्ज़री इंटीरियर</button>
@@ -652,9 +651,14 @@
     <!-- 9. FOOTER -->
     <footer class="bg-brand-dark text-slate-400 text-xs py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div class="text-center sm:text-left">
-                <span class="text-lg font-black text-white font-logo tracking-wider block">SPACE <span class="text-brand-orange">INNOVARE</span></span>
-                <span class="text-[11px] text-slate-500">Crafting Dream Spaces • Saras Circle, NH 21, Bharatpur</span>
+            <div class="flex items-center gap-3 text-center sm:text-left">
+                <div class="w-10 h-10 rounded-xl bg-slate-800 p-1 flex items-center justify-center border border-slate-700 overflow-hidden">
+                    <img id="footer-logo-img" src="" alt="Space INNOVARE" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <span class="text-lg font-black text-white font-logo tracking-wider block">SPACE <span class="text-brand-orange">INNOVARE</span></span>
+                    <span class="text-[11px] text-slate-500">Crafting Dream Spaces • Saras Circle, NH 21, Bharatpur</span>
+                </div>
             </div>
             <div class="text-center sm:text-right text-[11px]">
                 <p>© 2026 Space INNOVARE. सर्वाधिकार सुरक्षित।</p>
@@ -676,10 +680,10 @@
     </div>
 
     <!-- ======================================================== -->
-    <!-- 10. ADMIN MODAL (ADD / REPLACE / DELETE PROJECTS & VIDEOS) -->
+    <!-- 10. ADMIN MODAL (ADD / REPLACE / DELETE PROJECTS & LOGO) -->
     <!-- ======================================================== -->
-    <div id="admin-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl relative max-h-[90vh] overflow-y-auto animate-fade-in">
+    <div id="admin-modal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl relative max-h-[92vh] overflow-y-auto animate-fade-in">
             
             <button onclick="closeAdminModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 bg-slate-100 p-1.5 rounded-full transition">
                 <i data-lucide="x" class="w-5 h-5"></i>
@@ -691,7 +695,7 @@
                     <i data-lucide="lock" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 font-logo">एडमिन वेरिफिकेशन (Admin Login)</h3>
-                <p class="text-xs text-slate-500 mt-1 mb-4">प्रोजेक्ट्स को जोड़ने, बदलने या डिलीट करने के लिए पासवर्ड दर्ज करें (Default: <strong>1234</strong>)</p>
+                <p class="text-xs text-slate-500 mt-1 mb-4">प्रोजेक्ट्स बदलने, फोटो रिप्लेस करने या नया जोड़ने के लिए PIN दर्ज करें (Default: <strong>1234</strong>)</p>
                 
                 <input type="password" id="admin-pin" placeholder="Enter Admin PIN (1234)" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-brand-orange">
                 
@@ -705,7 +709,7 @@
                 <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
                     <div>
                         <h3 id="form-title" class="text-lg font-black text-slate-900 font-logo">नया प्रोजेक्ट जोड़ें</h3>
-                        <p class="text-[11px] text-slate-500">फोटो या वीडियो अपलोड / लिंक बदलें</p>
+                        <p class="text-[11px] text-slate-500">फोटो या वीडियो अपलोड / तुरंत रिप्लेस करें</p>
                     </div>
                     <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-full">
                         Admin Active
@@ -717,7 +721,7 @@
                 <div class="space-y-3.5">
                     <div>
                         <label class="text-xs font-bold text-slate-700">प्रोजेक्ट टाइटल (Title)</label>
-                        <input type="text" id="proj-title" placeholder="जैसे: 3BHK Luxury Interior or Villa Elevation" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                        <input type="text" id="proj-title" placeholder="जैसे: 3BHK Luxury Interior या 4K Villa Elevation" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
                     </div>
 
                     <div class="grid grid-cols-2 gap-3">
@@ -735,7 +739,7 @@
                             <label class="text-xs font-bold text-slate-700">मीडिया प्रकार (Type)</label>
                             <select id="proj-type" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange" onchange="toggleMediaType()">
                                 <option value="image">फोटो (Photo)</option>
-                                <option value="video">वीडियो (YouTube / MP4)</option>
+                                <option value="video">वीडियो (YouTube Link / Shorts)</option>
                             </select>
                         </div>
                     </div>
@@ -745,35 +749,56 @@
                         <input type="text" id="proj-location" placeholder="जैसे: Saras Circle, Bharatpur" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
                     </div>
 
-                    <!-- Direct Device File Upload -->
-                    <div id="file-upload-box">
-                        <label class="text-xs font-bold text-slate-700">गैलरी / फोन से फोटो चुनें (Direct Upload)</label>
-                        <input type="file" id="proj-file" accept="image/*" class="w-full border border-slate-300 rounded-xl p-2 text-xs mt-1 bg-slate-50" onchange="handleFileUpload(event)">
+                    <!-- Direct Device File Upload (With Auto Compression) -->
+                    <div id="file-upload-box" class="p-3 bg-orange-50/60 rounded-2xl border border-orange-200">
+                        <label class="text-xs font-bold text-brand-orangeDark block mb-1 flex items-center gap-1.5">
+                            <i data-lucide="upload" class="w-3.5 h-3.5"></i>
+                            <span>फोन / कंप्यूटर से फोटो चुनें (Auto-Compress & Fast)</span>
+                        </label>
+                        <input type="file" id="proj-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-brand-orange file:text-white hover:file:bg-brand-orangeDark cursor-pointer" onchange="handleFileUpload(event)">
+                        <span class="text-[10px] text-slate-500 block mt-1">✓ फोन कैमरे की बड़ी फोटो भी तुरंत लोड हो जाएगी</span>
                     </div>
 
                     <div>
-                        <label class="text-xs font-bold text-slate-700" id="url-label">या इमेज / वीडियो URL पेस्ट करें</label>
-                        <input type="text" id="proj-url" placeholder="https://images.unsplash.com/... or https://youtube.com/embed/..." class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                        <label class="text-xs font-bold text-slate-700" id="url-label">या इमेज / यूट्यूब वीडियो URL पेस्ट करें</label>
+                        <input type="text" id="proj-url" oninput="updateLiveMediaPreview()" placeholder="https://... या YouTube Link" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                    </div>
+
+                    <!-- LIVE PREVIEW BOX -->
+                    <div id="preview-box" class="hidden mt-2 p-2.5 bg-slate-100 rounded-2xl border border-slate-200">
+                        <span class="text-[10px] font-bold uppercase text-slate-500 block mb-1.5">लाइव प्रिव्यू (Preview):</span>
+                        <div id="preview-content" class="w-full h-36 rounded-xl overflow-hidden bg-black flex items-center justify-center">
+                            <!-- Preview injected via JS -->
+                        </div>
                     </div>
                 </div>
 
-                <div class="flex gap-2.5 mt-6">
-                    <button onclick="saveProjectToCloud()" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-md transition flex items-center justify-center gap-1.5">
+                <div class="flex gap-2.5 mt-5">
+                    <button id="save-btn" onclick="saveProjectToCloud()" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-md transition flex items-center justify-center gap-1.5">
                         <i data-lucide="cloud-upload" class="w-4 h-4"></i>
-                        <span>सेव करें (Save Live)</span>
+                        <span id="save-btn-text">सेव करें (Save Live)</span>
                     </button>
-                    <button onclick="resetAdminForm()" class="px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 rounded-xl text-xs transition">
+                    <button onclick="closeAdminModal()" class="px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-xs transition">
                         कैंसल
                     </button>
                 </div>
 
-                <!-- Reset to defaults button -->
-                <div class="mt-5 pt-3 border-t border-slate-100 flex justify-between items-center">
-                    <button onclick="resetToDefaultData()" class="text-[11px] text-rose-600 hover:underline flex items-center gap-1">
+                <!-- Custom Logo Upload Box in Admin -->
+                <div class="mt-6 p-3 bg-slate-50 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-bold text-slate-800 block mb-1 flex items-center gap-1">
+                        <i data-lucide="image" class="w-3.5 h-3.5 text-brand-orange"></i>
+                        <span>वेबसाइट का मुख्य लोगो बदलें (Change Logo)</span>
+                    </span>
+                    <input type="file" id="logo-file-input" accept="image/*" class="w-full text-xs text-slate-600 file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:text-[11px] file:font-bold file:bg-slate-800 file:text-white hover:file:bg-slate-700 cursor-pointer" onchange="handleLogoUpload(event)">
+                </div>
+
+                <!-- Reset to defaults & Logout buttons -->
+                <div class="mt-4 pt-3 border-t border-slate-100 flex justify-between items-center">
+                    <button onclick="resetToDefaultData()" class="text-[11px] text-rose-600 hover:underline flex items-center gap-1 font-semibold">
                         <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
-                        <span>डिफ़ॉल्ट डेटा रिस्टोर करें</span>
+                        <span>डिफ़ॉल्ट प्रोजेक्ट्स रिस्टोर करें</span>
                     </button>
-                    <button onclick="logoutAdmin()" class="text-[11px] text-slate-500 hover:underline">
+                    <button onclick="logoutAdmin()" class="text-[11px] text-slate-600 hover:text-slate-900 font-bold">
                         लॉगआउट
                     </button>
                 </div>
@@ -783,10 +808,33 @@
     </div>
 
     <!-- ======================================================== -->
-    <!-- JAVASCRIPT LOGIC (GALLERY, LIVE SYNC, ESTIMATOR & FORM)  -->
+    <!-- JAVASCRIPT LOGIC (GALLERY, COMPRESSION, LIVE REPLACE)    -->
     <!-- ======================================================== -->
     <script>
-        // 1. DEFAULT PROJECTS
+        // 1. DEFAULT BRAND LOGO SVG
+        const defaultLogoSVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23f97316"/><stop offset="100%" stop-color="%23ea580c"/></linearGradient></defs><rect width="120" height="120" rx="24" fill="%230a0d14"/><path d="M60 22 L98 52 L88 52 L88 95 L32 95 L32 52 L22 52 Z" fill="none" stroke="url(%23g)" stroke-width="7" stroke-linejoin="round"/><path d="M46 95 L46 62 L74 62 L74 95" fill="none" stroke="%23ffffff" stroke-width="6" stroke-linecap="round"/><circle cx="60" cy="42" r="6" fill="%23f97316"/></svg>`;
+
+        function loadBrandLogo() {
+            const savedLogo = localStorage.getItem("space_innovare_logo") || defaultLogoSVG;
+            const headerLogo = document.getElementById("header-logo-img");
+            const footerLogo = document.getElementById("footer-logo-img");
+            const siteFavicon = document.getElementById("site-favicon");
+            if (headerLogo) headerLogo.src = savedLogo;
+            if (footerLogo) footerLogo.src = savedLogo;
+            if (siteFavicon) siteFavicon.href = savedLogo;
+        }
+
+        function handleLogoUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            compressImageFile(file, 400, 0.85, function(compressedUrl) {
+                localStorage.setItem("space_innovare_logo", compressedUrl);
+                loadBrandLogo();
+                showToast("वेबसाइट का मुख्य लोगो सफलतापूर्वक अपडेट हो गया!", "success");
+            });
+        }
+
+        // 2. DEFAULT GALLERY PROJECTS
         const defaultProjects = [
             {
                 id: "p1",
@@ -838,17 +886,125 @@
             }
         ];
 
-        let projects = JSON.parse(localStorage.getItem("space_innovare_projects")) || defaultProjects;
+        let projects = [];
+        try {
+            const stored = localStorage.getItem("space_innovare_projects");
+            projects = stored ? JSON.parse(stored) : defaultProjects;
+        } catch (e) {
+            projects = defaultProjects;
+        }
+
         let currentFilter = 'all';
         let isAdminLoggedIn = false;
 
-        function saveAllToCloud(dataList) {
+        function saveAllToStorage(dataList) {
             projects = dataList;
-            localStorage.setItem("space_innovare_projects", JSON.stringify(projects));
+            try {
+                localStorage.setItem("space_innovare_projects", JSON.stringify(projects));
+            } catch (err) {
+                console.error("Storage full error", err);
+                showToast("स्टोरेज फुल हो गया है! कृपया अनावश्यक फोटो हटाएं।", "error");
+            }
             renderGallery();
         }
 
-        // 2. RENDER GALLERY CARDS
+        // 3. YOUTUBE / VIDEO URL NORMALIZER
+        function formatVideoEmbedUrl(url) {
+            if (!url) return '';
+            url = url.trim();
+            if (url.includes('youtube.com/shorts/')) {
+                const vid = url.split('youtube.com/shorts/')[1].split('?')[0].split('/')[0];
+                return `https://www.youtube.com/embed/${vid}`;
+            }
+            if (url.includes('youtu.be/')) {
+                const vid = url.split('youtu.be/')[1].split('?')[0].split('/')[0];
+                return `https://www.youtube.com/embed/${vid}`;
+            }
+            if (url.includes('watch?v=')) {
+                const vid = url.split('watch?v=')[1].split('&')[0];
+                return `https://www.youtube.com/embed/${vid}`;
+            }
+            return url;
+        }
+
+        // 4. SMART CLIENT-SIDE IMAGE COMPRESSION (Handles huge camera photos)
+        function compressImageFile(file, maxDimension, quality, callback) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    let width = img.width;
+                    let height = img.height;
+
+                    if (width > height && width > maxDimension) {
+                        height = Math.round((height * maxDimension) / width);
+                        width = maxDimension;
+                    } else if (height > maxDimension) {
+                        width = Math.round((width * maxDimension) / height);
+                        height = maxDimension;
+                    }
+
+                    const canvas = document.createElement('canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    const compressedBase64 = canvas.toDataURL('image/jpeg', quality);
+                    callback(compressedBase64);
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            showToast("फोटो प्रोसेस हो रही है...", "info");
+            compressImageFile(file, 1200, 0.78, function(compressedBase64) {
+                document.getElementById("proj-url").value = compressedBase64;
+                updateLiveMediaPreview();
+                showToast("फोटो तैयार है! अब 'सेव/अपडेट करें' दबाएं", "success");
+            });
+        }
+
+        function toggleMediaType() {
+            const type = document.getElementById("proj-type").value;
+            const fileBox = document.getElementById("file-upload-box");
+            const urlLabel = document.getElementById("url-label");
+            if (type === "video") {
+                fileBox.classList.add("hidden");
+                urlLabel.innerText = "यूट्यूब वीडियो लिंक पेस्ट करें (Watch, Shorts या Embed)";
+            } else {
+                fileBox.classList.remove("hidden");
+                urlLabel.innerText = "या ऑनलाइन इमेज URL पेस्ट करें";
+            }
+            updateLiveMediaPreview();
+        }
+
+        function updateLiveMediaPreview() {
+            const type = document.getElementById("proj-type").value;
+            let url = document.getElementById("proj-url").value.trim();
+            const box = document.getElementById("preview-box");
+            const content = document.getElementById("preview-content");
+
+            if (!url) {
+                box.classList.add("hidden");
+                return;
+            }
+
+            box.classList.remove("hidden");
+            if (type === "video") {
+                const embedUrl = formatVideoEmbedUrl(url);
+                content.innerHTML = `<iframe class="w-full h-full" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
+            } else {
+                content.innerHTML = `<img src="${url}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x200?text=Invalid+Image+URL'">`;
+            }
+        }
+
+        // 5. RENDER GALLERY CARDS
         function renderGallery() {
             const grid = document.getElementById("gallery-grid");
             if (!grid) return;
@@ -863,7 +1019,7 @@
                     <div class="col-span-full text-center py-16 bg-white rounded-3xl border border-dashed border-slate-300">
                         <i data-lucide="image-off" class="w-10 h-10 text-slate-400 mx-auto mb-2"></i>
                         <p class="text-sm font-bold text-slate-600">इस कैटेगरी में अभी कोई आइटम नहीं है।</p>
-                        <p class="text-xs text-slate-400 mt-1">एडमिन पैनल से नया प्रोजेक्ट जोड़ें।</p>
+                        <p class="text-xs text-slate-400 mt-1">एडमिन पैनल से नया प्रोजेक्ट जोड़ें या रिप्लेस करें।</p>
                     </div>`;
                 lucide.createIcons();
                 return;
@@ -875,18 +1031,15 @@
 
                 let mediaHtml = "";
                 if (p.type === "video") {
-                    let videoSrc = p.url;
-                    if (videoSrc.includes("watch?v=")) {
-                        videoSrc = videoSrc.replace("watch?v=", "embed/");
-                    }
+                    const embedUrl = formatVideoEmbedUrl(p.url);
                     mediaHtml = `
                         <div class="relative w-full aspect-video bg-black">
-                            <iframe class="w-full h-full" src="${videoSrc}" title="${p.title}" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="${embedUrl}" title="${p.title}" frameborder="0" allowfullscreen></iframe>
                         </div>`;
                 } else {
                     mediaHtml = `
                         <div class="relative w-full h-52 sm:h-60 bg-slate-100 overflow-hidden">
-                            <img src="${p.url}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img src="${p.url}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
                             <div class="absolute top-3 left-3">
                                 <span class="px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
                                     ${p.category}
@@ -927,7 +1080,7 @@
             lucide.createIcons();
         }
 
-        // 3. FILTER TABS
+        // 6. FILTER TABS
         function filterGallery(category, btn) {
             currentFilter = category;
             document.querySelectorAll(".gallery-tab").forEach(tab => {
@@ -937,38 +1090,7 @@
             renderGallery();
         }
 
-        // 4. DIRECT FILE TO BASE64 UPLOAD
-        function handleFileUpload(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            if (file.size > 2 * 1024 * 1024) {
-                showToast("कृपया 2MB से छोटी फोटो चुनें", "error");
-                return;
-            }
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById("proj-url").value = e.target.result;
-                showToast("फोटो अपलोड हो गई है, अब 'सेव करें' पर क्लिक करें!", "success");
-            };
-            reader.readAsDataURL(file);
-        }
-
-        function toggleMediaType() {
-            const type = document.getElementById("proj-type").value;
-            const fileBox = document.getElementById("file-upload-box");
-            const urlLabel = document.getElementById("url-label");
-            if (type === "video") {
-                fileBox.classList.add("hidden");
-                urlLabel.innerText = "यूट्यूब / वीडियो लिंक डालें (Embed or Watch Link)";
-            } else {
-                fileBox.classList.remove("hidden");
-                urlLabel.innerText = "या ऑनलाइन इमेज URL पेस्ट करें";
-            }
-        }
-
-        // 5. ADMIN FUNCTIONS
+        // 7. ADMIN CONTROLLER
         function openAdminModal() {
             document.getElementById("admin-modal").classList.remove("hidden");
             if (isAdminLoggedIn) {
@@ -987,7 +1109,7 @@
         }
 
         function verifyAdmin() {
-            const pin = document.getElementById("admin-pin").value;
+            const pin = document.getElementById("admin-pin").value.trim();
             if (pin === "1234") {
                 isAdminLoggedIn = true;
                 document.getElementById("admin-auth-section").classList.add("hidden");
@@ -997,7 +1119,7 @@
                 showToast("एडमिन लॉगिन सफल!", "success");
                 renderGallery();
             } else {
-                showToast("गलत पासवर्ड! कृपया सही पिन डालें (1234)", "error");
+                showToast("गलत पासवर्ड! कृपया सही पिन दर्ज करें (1234)", "error");
             }
         }
 
@@ -1010,44 +1132,55 @@
             showToast("एडमिन लॉगआउट हो गया", "info");
         }
 
+        // 8. SAVE & REPLACE PROJECT FUNCTION
         function saveProjectToCloud() {
-            const editId = document.getElementById("edit-id").value;
+            const editId = document.getElementById("edit-id").value.trim();
             const title = document.getElementById("proj-title").value.trim();
             const category = document.getElementById("proj-category").value;
             const type = document.getElementById("proj-type").value;
             const location = document.getElementById("proj-location").value.trim() || "Bharatpur • Jaipur • Noida";
             let url = document.getElementById("proj-url").value.trim();
 
-            if (!title || !url) {
-                showToast("कृपया टाइटल और URL दोनों भरें!", "error");
+            if (!title) {
+                showToast("कृपया प्रोजेक्ट का नाम (टाइटल) लिखें!", "error");
+                return;
+            }
+            if (!url) {
+                showToast("कृपया फोटो चुनें या वीडियो लिंक पेस्ट करें!", "error");
                 return;
             }
 
-            if (type === "video" && url.includes("watch?v=")) {
-                url = url.replace("watch?v=", "embed/");
+            if (type === "video") {
+                url = formatVideoEmbedUrl(url);
             }
 
             let updatedList = [...projects];
 
             if (editId) {
-                const idx = updatedList.findIndex(p => p.id === editId);
+                // Update / Replace existing
+                const idx = updatedList.findIndex(p => String(p.id) === String(editId));
                 if (idx !== -1) {
                     updatedList[idx] = { id: editId, title, category, type, location, url };
+                    showToast("प्रोजेक्ट सफलतापूर्वक रिप्लेस/अपडेट हो गया!", "success");
+                } else {
+                    updatedList.unshift({ id: editId, title, category, type, location, url });
+                    showToast("प्रोजेक्ट सेव हो गया!", "success");
                 }
-                showToast("प्रोजेक्ट सफलतापूर्वक बदल दिया गया!", "success");
             } else {
+                // Add new project
                 const newId = "p_" + Date.now();
                 updatedList.unshift({ id: newId, title, category, type, location, url });
                 showToast("नया प्रोजेक्ट सफलतापूर्वक जोड़ा गया!", "success");
             }
 
-            saveAllToCloud(updatedList);
+            saveAllToStorage(updatedList);
             closeAdminModal();
         }
 
         function editProjectById(id) {
-            const p = projects.find(item => item.id === id);
+            const p = projects.find(item => String(item.id) === String(id));
             if (!p) return;
+
             document.getElementById("edit-id").value = p.id;
             document.getElementById("proj-title").value = p.title;
             document.getElementById("proj-category").value = p.category;
@@ -1055,14 +1188,17 @@
             document.getElementById("proj-location").value = p.location || "";
             document.getElementById("proj-url").value = p.url;
             document.getElementById("form-title").innerText = "प्रोजेक्ट बदलें / Replace Media";
+            document.getElementById("save-btn-text").innerText = "अपडेट करें (Replace Now)";
+            
             toggleMediaType();
+            updateLiveMediaPreview();
             openAdminModal();
         }
 
         function deleteProjectById(id) {
             if (confirm("क्या आप वाकई इस प्रोजेक्ट को हटाना चाहते हैं?")) {
-                const updatedList = projects.filter(p => p.id !== id);
-                saveAllToCloud(updatedList);
+                const updatedList = projects.filter(p => String(p.id) !== String(id));
+                saveAllToStorage(updatedList);
                 showToast("प्रोजेक्ट हटा दिया गया!", "info");
             }
         }
@@ -1072,18 +1208,21 @@
             document.getElementById("proj-title").value = "";
             document.getElementById("proj-url").value = "";
             document.getElementById("proj-location").value = "";
+            document.getElementById("proj-file").value = "";
             document.getElementById("form-title").innerText = "नया प्रोजेक्ट जोड़ें";
+            document.getElementById("save-btn-text").innerText = "सेव करें (Save Live)";
+            document.getElementById("preview-box").classList.add("hidden");
         }
 
         function resetToDefaultData() {
             if (confirm("क्या आप सभी डिफ़ॉल्ट प्रोजेक्ट्स को वापस लाना चाहते हैं?")) {
-                saveAllToCloud([...defaultProjects]);
+                saveAllToStorage([...defaultProjects]);
                 closeAdminModal();
                 showToast("डिफ़ॉल्ट डेटा रिस्टोर हो गया!", "success");
             }
         }
 
-        // 6. ESTIMATOR LOGIC
+        // 9. ESTIMATOR LOGIC
         function updateEstimator() {
             const area = parseFloat(document.getElementById("calc-area").value) || 0;
             const service = document.getElementById("calc-service").value;
@@ -1116,7 +1255,7 @@
             window.open(`https://wa.me/919910007412?text=${text}`, '_blank');
         }
 
-        // 7. CONTACT FORM SUBMISSION
+        // 10. CONTACT FORM SUBMISSION
         function handleContactSubmit(e) {
             e.preventDefault();
             const name = document.getElementById("form-name").value;
@@ -1130,9 +1269,10 @@
             showToast("अनुरोध WhatsApp पर भेजा जा रहा है...", "success");
         }
 
-        // 8. TOAST UTILITY
+        // 11. TOAST NOTIFICATION UTILITY
         function showToast(message, type = "info") {
             const container = document.getElementById("toast-container");
+            if (!container) return;
             const toast = document.createElement("div");
             let bgClass = type === "success" ? "bg-emerald-600" : (type === "error" ? "bg-rose-600" : "bg-slate-900");
             toast.className = `${bgClass} text-white px-4 py-2.5 rounded-2xl shadow-xl text-xs font-bold flex items-center gap-2 pointer-events-auto transition duration-300`;
@@ -1141,8 +1281,9 @@
             setTimeout(() => toast.remove(), 3500);
         }
 
-        // INITIALIZATION
+        // 12. INITIALIZATION
         window.addEventListener("DOMContentLoaded", () => {
+            loadBrandLogo();
             renderGallery();
             updateEstimator();
             lucide.createIcons();
