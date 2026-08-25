@@ -7,7 +7,7 @@
     <meta name="description" content="SPACE INNOVARE - Crafting Dream Spaces. Premium Architecture Design, Luxury Interior Design, 3D Elevation & Turnkey Construction in Saras Circle, NH 21, Bharatpur, Jaipur & Noida.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0d14'/><path d='M20 40 L50 15 L80 40 L80 85 L20 85 Z' fill='none' stroke='%23f97316' stroke-width='8'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 45 L50 15 L80 45 L80 85 L20 85 Z' fill='none' stroke='%23dc2626' stroke-width='9' stroke-linejoin='round'/></svg>">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,14 +17,14 @@
                 extend: {
                     colors: {
                         brand: {
+                            red: '#dc2626',
+                            redDark: '#b91c1c',
                             orange: '#f97316',
-                            orangeDark: '#ea580c',
-                            dark: '#0a0d14',
-                            blue: '#1e3a8a',
+                            dark: '#0f172a',
                         }
                     },
                     boxShadow: {
-                        'neon-orange': '0 0 25px -5px rgba(249, 115, 22, 0.35)',
+                        'neon-red': '0 0 25px -5px rgba(220, 38, 38, 0.35)',
                         'neon-blue': '0 0 25px -5px rgba(59, 130, 246, 0.35)',
                         'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.35)',
                         'neon-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.35)',
@@ -41,7 +41,7 @@
 
     <!-- Google Fonts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap');
         
         body {
             font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
@@ -66,29 +66,26 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased pb-20 md:pb-0 selection:bg-brand-orange selection:text-white">
+<body class="bg-slate-50 text-slate-800 antialiased pb-20 md:pb-0 selection:bg-brand-red selection:text-white">
 
     <!-- TOAST NOTIFICATION CONTAINER -->
     <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
-    <!-- 1. TOP CITIES, EMAIL & CONTACT BAR -->
-    <div class="bg-brand-dark text-white text-[11px] py-2 px-3 sm:px-6 border-b border-slate-800">
+    <!-- 1. TOP CITIES, EMAIL & CONTACT BAR (MATCHING SCREENSHOT) -->
+    <div class="bg-[#111827] text-white text-[11px] py-2 px-3 sm:px-6 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-            <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange font-bold border border-brand-orange/30 text-[10px] tracking-wider">
-                    BHARATPUR • JAIPUR • NOIDA
-                </span>
-                <span class="hidden md:inline text-slate-400 text-[11px]">| सारस चौराहा, NH 21, भरतपुर</span>
+            <div class="flex items-center gap-2 font-bold text-red-500 tracking-wider">
+                <span>BHARATPUR • JAIPUR • NOIDA</span>
             </div>
             
-            <div class="flex items-center gap-3 sm:gap-4 font-semibold text-slate-300 ml-auto flex-wrap">
-                <a href="mailto:spaceinnovare@gmail.com" class="hover:text-brand-orange flex items-center gap-1.5 transition">
-                    <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-orange"></i>
+            <div class="flex items-center gap-3 sm:gap-5 font-semibold text-slate-300 ml-auto flex-wrap text-[11px]">
+                <a href="mailto:spaceinnovare@gmail.com" class="hover:text-red-400 flex items-center gap-1.5 transition">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-red-500"></i>
                     <span>spaceinnovare@gmail.com</span>
                 </a>
                 <span class="text-slate-700">|</span>
-                <a href="tel:9910007412" class="hover:text-brand-orange flex items-center gap-1.5 transition">
-                    <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-orange"></i>
+                <a href="tel:9910007412" class="hover:text-red-400 flex items-center gap-1.5 transition">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5 text-red-500"></i>
                     <span>9910007412</span>
                 </a>
                 <span class="text-slate-700">|</span>
@@ -100,88 +97,95 @@
         </div>
     </div>
 
-    <!-- 2. MAIN NAVBAR (LOGO ONLY) -->
-    <header class="sticky top-0 z-40 bg-[#0a0d14] border-b border-slate-800 shadow-lg transition">
+    <!-- 2. MAIN NAVBAR (MATCHING SCREENSHOT WITH EXACT LOGO) -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             
-            <!-- ORIGINAL LOGO ONLY -->
+            <!-- OFFICIAL LOGO IN EXACT POSITION & RATIO -->
             <a href="#" class="flex items-center group py-1" title="SPACE INNOVARE - Crafting Dream Spaces">
                 <div class="flex items-center transition transform group-hover:scale-105">
-                    <svg class="h-11 sm:h-13 w-auto" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Orange House Outline -->
-                        <path d="M 68 30 L 38 6 L 8 30 L 8 86 L 75 86" stroke="#f97316" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <!-- Logo Typography -->
-                        <text x="86" y="32" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="23" font-weight="600" letter-spacing="4">SPACE</text>
-                        <text x="84" y="67" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="34" font-weight="900" letter-spacing="2">INNOVARE</text>
-                        <text x="86" y="88" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">CRAFTING DREAM SPACES</text>
+                    <svg class="h-12 sm:h-14 w-auto" viewBox="0 0 250 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Red/Orange House Outline with Rounded Corner -->
+                        <path d="M 68 38 L 44 10 L 10 38 L 10 74 Q 10 78 15 78 L 68 78" stroke="#dc2626" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- SPACE Text -->
+                        <text x="76" y="34" fill="#0f172a" font-family="'Montserrat', sans-serif" font-size="28" font-weight="900" letter-spacing="2">SPACE</text>
+                        <!-- INNOVARE Text -->
+                        <text x="36" y="68" fill="#0f172a" font-family="'Montserrat', sans-serif" font-size="34" font-weight="900" letter-spacing="1">INNOVARE</text>
+                        <!-- CRAFTING DREAM SPACES Subtitle -->
+                        <line x1="68" y1="80" x2="78" y2="80" stroke="#0f172a" stroke-width="1.5"/>
+                        <text x="82" y="82" fill="#0f172a" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" letter-spacing="1.5">CRAFTING DREAM SPACES</text>
+                        <line x1="194" y1="80" x2="204" y2="80" stroke="#0f172a" stroke-width="1.5"/>
                     </svg>
                 </div>
             </a>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-300">
-                <a href="#services" class="hover:text-brand-orange transition">सेवाएं (Services)</a>
-                <a href="#portfolio" class="hover:text-brand-orange transition">रियल प्रोजेक्ट्स</a>
-                <a href="#estimator" class="hover:text-brand-orange transition">लागत कैलकुलेटर</a>
-                <a href="#locations" class="hover:text-brand-orange transition">हमारे शहर</a>
-                <a href="#contact" class="hover:text-brand-orange transition">संपर्क</a>
+            <!-- Center Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-700">
+                <a href="#services" class="hover:text-brand-red transition">सेवाएं (SERVICES)</a>
+                <a href="#portfolio" class="hover:text-brand-red transition">रियल प्रोजेक्ट्स</a>
+                <a href="#estimator" class="hover:text-brand-red transition">लागत कैलकुलेटर</a>
+                <a href="#locations" class="hover:text-brand-red transition">हमारे शहर</a>
+                <a href="#contact" class="hover:text-brand-red transition">संपर्क</a>
             </nav>
 
-            <!-- Admin & WhatsApp Buttons -->
+            <!-- Right Buttons: Admin View & Consultation (Matching Screenshot) -->
             <div class="flex items-center gap-2 sm:gap-3">
-                <button onclick="openAdminModal()" id="nav-admin-btn" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition flex items-center gap-1.5 border border-slate-700 shadow-sm" title="Manage Projects">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-orange"></i>
-                    <span class="hidden sm:inline">Admin Panel</span>
+                <button onclick="openAdminModal()" id="nav-admin-btn" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Admin View">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-slate-600"></i>
+                    <span>Admin View</span>
                 </button>
 
-                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Architecture/Interior%20Design" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orangeDark hover:from-brand-orangeDark hover:to-orange-700 text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-brand-orange/20 flex items-center gap-1.5 transition transform hover:scale-[1.02]">
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20Architecture/Interior%20Design" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 rounded-xl bg-[#dc2626] hover:bg-red-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-red-500/20 transition transform hover:scale-[1.02]">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    <span class="hidden sm:inline">मुफ्त परामर्श</span>
-                    <span class="sm:hidden">Consult</span>
+                    <span>मुफ्त परामर्श</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 3. HERO SECTION -->
-    <section class="relative pt-8 pb-14 sm:py-20 bg-gradient-to-b from-orange-50/40 via-white to-slate-50 overflow-hidden">
+    <!-- 3. HERO SECTION (100% MATCHING SCREENSHOT) -->
+    <section class="relative pt-10 pb-16 sm:py-20 bg-gradient-to-b from-slate-50/50 via-white to-slate-100/60 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
+                <!-- Left Content -->
                 <div class="lg:col-span-7 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-orange/30 shadow-sm text-xs font-bold text-brand-orangeDark mb-5">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-bold text-slate-700 mb-6">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                         <span>Saras Circle, NH 21, Bharatpur • Jaipur • Noida</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-tight font-logo">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight font-logo">
                         सपनों के घर को दें <br>
-                        <span class="bg-gradient-to-r from-brand-orange to-amber-600 bg-clip-text text-transparent">आधुनिक पहचान</span>
+                        <span class="text-[#dc2626]">आधुनिक पहचान</span>
                     </h1>
 
                     <p class="mt-4 sm:mt-5 text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                         2D नक्शा, 3D एलिवेशन, लक्ज़री इंटीरियर, सम्पूर्ण वास्तु अनुसार प्लानिंग, टर्नकी कंस्ट्रक्शन और <strong>नगर पालिका अप्रूवल ड्रॉइंग्स</strong>।
                     </p>
 
-                    <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                        <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20my%20home%20design" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2.5 transition transform hover:scale-[1.02]">
-                            <i data-lucide="phone-call" class="w-4 h-4 text-brand-orange"></i>
+                    <!-- Hero Action Buttons -->
+                    <div class="mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3.5 justify-center lg:justify-start">
+                        <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20my%20home%20design" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-[#1e293b] hover:bg-slate-900 text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2.5 transition transform hover:scale-[1.02]">
+                            <i data-lucide="phone-call" class="w-4 h-4 text-red-500"></i>
                             <span>कॉल / WhatsApp (9910007412)</span>
                         </a>
-                        <a href="#estimator" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-900 font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition">
-                            <i data-lucide="calculator" class="w-4 h-4 text-brand-orange"></i>
+                        <a href="#estimator" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition">
+                            <i data-lucide="calculator" class="w-4 h-4 text-red-500"></i>
                             <span>लागत कैलकुलेटर</span>
                         </a>
                     </div>
                 </div>
 
+                <!-- Right Hero Image Card (Matching Screenshot) -->
                 <div class="lg:col-span-5">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 bg-white p-2.5">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Space INNOVARE 3D Elevation" class="w-full h-64 sm:h-80 object-cover rounded-2xl">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Space INNOVARE 3D Elevation" class="w-full h-72 sm:h-80 object-cover">
                         
-                        <div class="absolute bottom-5 left-5 right-5 p-3.5 rounded-2xl bg-brand-dark/90 backdrop-blur-md text-white flex items-center justify-between border border-white/10 shadow-lg">
+                        <!-- Floating Info Bar Inside Image -->
+                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-slate-950/90 backdrop-blur-md text-white flex items-center justify-between border border-white/10 shadow-lg">
                             <div>
-                                <span class="text-xs font-black font-logo tracking-wider block text-brand-orange">SPACE INNOVARE</span>
+                                <span class="text-xs font-black font-logo tracking-wider block text-red-500">SPACE INNOVARE</span>
                                 <span class="text-[10px] text-slate-300">Saras Circle, NH 21, Bharatpur</span>
                             </div>
                             <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-full border border-emerald-500/30 flex items-center gap-1">
@@ -192,28 +196,28 @@
                 </div>
             </div>
 
-            <!-- Trust Bar -->
-            <div class="mt-10 flex gap-3 overflow-x-auto no-scrollbar py-2 text-xs font-bold text-slate-800">
+            <!-- Trust Bar Badges (Matching Screenshot) -->
+            <div class="mt-12 flex gap-3.5 overflow-x-auto no-scrollbar py-2 text-xs font-bold text-slate-700">
                 <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
-                    <div class="w-7 h-7 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
+                    <div class="w-7 h-7 rounded-xl bg-red-50 flex items-center justify-center text-red-600 shrink-0">
                         <i data-lucide="users" class="w-4 h-4"></i>
                     </div>
                     <span>अनुभवी आर्किटेक्ट टीम</span>
                 </div>
                 <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
-                    <div class="w-7 h-7 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
+                    <div class="w-7 h-7 rounded-xl bg-red-50 flex items-center justify-center text-red-600 shrink-0">
                         <i data-lucide="compass" class="w-4 h-4"></i>
                     </div>
                     <span>वास्तु अनुसार डिज़ाइन</span>
                 </div>
                 <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
-                    <div class="w-7 h-7 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
+                    <div class="w-7 h-7 rounded-xl bg-red-50 flex items-center justify-center text-red-600 shrink-0">
                         <i data-lucide="clock" class="w-4 h-4"></i>
                     </div>
                     <span>समय पर डिलीवरी</span>
                 </div>
                 <div class="shrink-0 px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
-                    <div class="w-7 h-7 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+                    <div class="w-7 h-7 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0">
                         <i data-lucide="shield-check" class="w-4 h-4"></i>
                     </div>
                     <span>क्वालिटी की गारंटी</span>
@@ -225,7 +229,7 @@
     <!-- 4. 6 COLORFUL ARCHITECTURE & INTERIOR SERVICES -->
     <section id="services" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="px-3 py-1 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 text-brand-orangeDark text-[11px] font-extrabold uppercase tracking-wider border border-orange-200 shadow-sm">हमारी प्रमुख सेवाएं</span>
+            <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-[11px] font-extrabold uppercase tracking-wider border border-red-200 shadow-sm">हमारी प्रमुख सेवाएं</span>
             <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">Architecture & Interior Suite</h2>
             <p class="text-xs sm:text-sm text-slate-600 mt-2">आपकी आवश्यकता अनुसार हाई-क्वालिटी, वास्तु-अनुकूलित एवं आधुनिक आर्किटेक्चरल समाधान</p>
         </div>
@@ -426,15 +430,15 @@
                 </div>
                 
                 <!-- Open Admin Panel -->
-                <button onclick="openAdminModal()" class="px-4 py-2.5 rounded-xl bg-brand-dark hover:bg-slate-900 text-white font-bold text-xs flex items-center gap-2 self-start sm:self-auto shadow-md transition">
-                    <i data-lucide="sliders-horizontal" class="w-4 h-4 text-brand-orange"></i>
+                <button onclick="openAdminModal()" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-2 self-start sm:self-auto shadow-md transition">
+                    <i data-lucide="sliders-horizontal" class="w-4 h-4 text-red-500"></i>
                     <span>Manage / Replace Media</span>
                 </button>
             </div>
 
             <!-- Filter Tabs -->
             <div class="flex gap-2 overflow-x-auto no-scrollbar pb-3 mb-6" id="gallery-tabs-container">
-                <button onclick="filterGallery('all', this)" class="gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-brand-dark text-white shadow-sm transition">सभी (All)</button>
+                <button onclick="filterGallery('all', this)" class="gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-white shadow-sm transition">सभी (All)</button>
                 <button onclick="filterGallery('interior', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">लक्ज़री इंटीरियर</button>
                 <button onclick="filterGallery('woodwork', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">डोर्स & वॉर्डरोब</button>
                 <button onclick="filterGallery('3d', this)" class="gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition">3D एलिवेशन</button>
@@ -451,7 +455,7 @@
     <!-- 6. THREE CITIES PRESENCE SECTION -->
     <section id="locations" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[11px] font-bold uppercase tracking-wider">Service Areas</span>
+            <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-[11px] font-bold uppercase tracking-wider">Service Areas</span>
             <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">हमारे सक्रिय शहर व कार्यालय</h2>
             <p class="text-xs sm:text-sm text-slate-600 mt-2">हम राजस्थान और दिल्ली-एनसीआर में पूर्ण गुणवत्ता के साथ सेवाएं दे रहे हैं</p>
         </div>
@@ -459,20 +463,20 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             <!-- City 1: Bharatpur -->
-            <div class="bg-white rounded-3xl p-6 border-2 border-brand-orange/40 shadow-lg relative overflow-hidden flex flex-col justify-between">
-                <div class="absolute top-0 right-0 bg-brand-orange text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-xl tracking-wider">
+            <div class="bg-white rounded-3xl p-6 border-2 border-red-500/40 shadow-lg relative overflow-hidden flex flex-col justify-between">
+                <div class="absolute top-0 right-0 bg-[#dc2626] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-xl tracking-wider">
                     Head Office
                 </div>
                 <div>
-                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-orange flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-4">
                         <i data-lucide="map-pin" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-black text-slate-900 font-logo">भरतपुर (Bharatpur)</h3>
                     <p class="text-xs text-slate-600 mt-2 font-medium">सारस चौराहा, NH 21, भरतपुर (राज.)</p>
                     <p class="text-xs text-slate-500 mt-1">2D/3D नक्शा, इंटीरियर व टर्नकी कंस्ट्रक्शन</p>
                 </div>
-                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE%20Bharatpur,%20I%20want%20to%20visit/consult." target="_blank" class="mt-5 w-full py-2.5 rounded-xl bg-brand-dark text-white font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-slate-900 transition">
-                    <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-orange"></i>
+                <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE%20Bharatpur,%20I%20want%20to%20visit/consult." target="_blank" class="mt-5 w-full py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-slate-800 transition">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-red-500"></i>
                     <span>भरतपुर ऑफिस से संपर्क</span>
                 </a>
             </div>
@@ -488,7 +492,7 @@
                     <p class="text-xs text-slate-500 mt-1">लक्ज़री विला प्लानिंग & 3D एलिवेशन</p>
                 </div>
                 <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE%20Jaipur,%20I%20want%20to%20consult." target="_blank" class="mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-1.5 transition">
-                    <i data-lucide="message-circle" class="w-3.5 h-3.5 text-brand-orange"></i>
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5 text-red-500"></i>
                     <span>जयपुर कंसल्टेशन</span>
                 </a>
             </div>
@@ -504,7 +508,7 @@
                     <p class="text-xs text-slate-500 mt-1">हाई-राइज अपार्टमेंट & लक्ज़री इंटीरियर</p>
                 </div>
                 <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE%20Noida,%20I%20want%20to%20consult." target="_blank" class="mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-1.5 transition">
-                    <i data-lucide="message-circle" class="w-3.5 h-3.5 text-brand-orange"></i>
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5 text-red-500"></i>
                     <span>नोएडा कंसल्टेशन</span>
                 </a>
             </div>
@@ -513,10 +517,10 @@
     </section>
 
     <!-- 7. INSTANT COST ESTIMATOR -->
-    <section id="estimator" class="py-16 bg-gradient-to-br from-slate-900 via-brand-dark to-slate-950 text-white">
+    <section id="estimator" class="py-16 bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-10">
-                <span class="px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange border border-brand-orange/30 text-[11px] font-bold uppercase tracking-wider">Quick Calculation</span>
+                <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-[11px] font-bold uppercase tracking-wider">Quick Calculation</span>
                 <h2 class="text-2xl sm:text-4xl font-black font-logo mt-2">घर के डिज़ाइन व निर्माण की अनुमानित लागत</h2>
                 <p class="text-xs sm:text-sm text-slate-400 mt-2">अपना प्लॉट साइज दर्ज करें और तुरंत अनुमानित कोटेशन प्राप्त करें</p>
             </div>
@@ -525,12 +529,12 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-xs font-bold text-slate-300 mb-1.5">प्लॉट एरिया (Square Feet)</label>
-                        <input type="number" id="calc-area" value="1200" min="100" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-orange">
+                        <input type="number" id="calc-area" value="1200" min="100" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
                     </div>
 
                     <div>
                         <label class="block text-xs font-bold text-slate-300 mb-1.5">सर्विस चुनें</label>
-                        <select id="calc-service" class="w-full bg-slate-800 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-orange">
+                        <select id="calc-service" class="w-full bg-slate-800 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
                             <option value="planning">2D नक्शा + 3D एलिवेशन</option>
                             <option value="interior">प्रीमियम इंटीरियर डिज़ाइन</option>
                             <option value="construction">टर्नकी कंस्ट्रक्शन (विद मटेरियल)</option>
@@ -541,10 +545,10 @@
                 <div class="mt-8 p-5 rounded-2xl bg-white/10 border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
                         <span class="text-xs text-slate-400 block font-bold uppercase tracking-wider">अनुमानित लागत (Estimated Cost)</span>
-                        <span id="calc-result" class="text-2xl sm:text-3xl font-black text-brand-orange font-logo">₹ 14,400 - ₹ 24,000*</span>
+                        <span id="calc-result" class="text-2xl sm:text-3xl font-black text-red-500 font-logo">₹ 14,400 - ₹ 24,000*</span>
                     </div>
 
-                    <button onclick="sendEstimateToWhatsApp()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-brand-orange to-amber-500 hover:from-brand-orangeDark hover:to-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition">
+                    <button onclick="sendEstimateToWhatsApp()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition">
                         <i data-lucide="send" class="w-4 h-4"></i>
                         <span>WhatsApp पर कोटेशन लें</span>
                     </button>
@@ -558,7 +562,7 @@
     <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-12 gap-10">
             <div class="lg:col-span-5">
-                <span class="px-3 py-1 rounded-full bg-orange-100 text-brand-orangeDark text-[11px] font-bold uppercase tracking-wider">Get in Touch</span>
+                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-[11px] font-bold uppercase tracking-wider">Get in Touch</span>
                 <h2 class="text-2xl sm:text-4xl font-black text-slate-950 font-logo mt-2">आज ही अपने प्रोजेक्ट पर चर्चा करें</h2>
                 <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
                     हमारा उद्देश्य आपके बजट में उच्च गुणवत्ता और आधुनिक वास्तुकला प्रदान करना है। सीधे कॉल या मैसेज करें।
@@ -566,27 +570,27 @@
 
                 <div class="mt-8 space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center shrink-0">
+                        <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0">
                             <i data-lucide="phone-call" class="w-5 h-5"></i>
                         </div>
                         <div>
                             <span class="text-[10px] text-slate-400 uppercase font-bold block">फोन नंबर</span>
-                            <a href="tel:9910007412" class="text-sm font-black text-slate-900 hover:text-brand-orange">9910007412</a>
+                            <a href="tel:9910007412" class="text-sm font-black text-slate-900 hover:text-red-600">9910007412</a>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center shrink-0">
+                        <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0">
                             <i data-lucide="mail" class="w-5 h-5"></i>
                         </div>
                         <div>
                             <span class="text-[10px] text-slate-400 uppercase font-bold block">ईमेल</span>
-                            <a href="mailto:spaceinnovare@gmail.com" class="text-sm font-black text-slate-900 hover:text-brand-orange">spaceinnovare@gmail.com</a>
+                            <a href="mailto:spaceinnovare@gmail.com" class="text-sm font-black text-slate-900 hover:text-red-600">spaceinnovare@gmail.com</a>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center shrink-0">
+                        <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0">
                             <i data-lucide="map-pin" class="w-5 h-5"></i>
                         </div>
                         <div>
@@ -604,18 +608,18 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="text-xs font-bold text-slate-700">आपका नाम</label>
-                                <input type="text" id="form-name" required placeholder="जैसे: राहुल शर्मा" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                                <input type="text" id="form-name" required placeholder="जैसे: राहुल शर्मा" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-red-500">
                             </div>
                             <div>
                                 <label class="text-xs font-bold text-slate-700">मोबाइल नंबर</label>
-                                <input type="tel" id="form-phone" required placeholder="जैसे: 9876543210" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                                <input type="tel" id="form-phone" required placeholder="जैसे: 9876543210" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-red-500">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="text-xs font-bold text-slate-700">आपका शहर</label>
-                                <select id="form-city" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                                <select id="form-city" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-red-500">
                                     <option value="Bharatpur">भरतपुर (Bharatpur)</option>
                                     <option value="Jaipur">जयपुर (Jaipur)</option>
                                     <option value="Noida">नोएडा (Noida / NCR)</option>
@@ -624,7 +628,7 @@
                             </div>
                             <div>
                                 <label class="text-xs font-bold text-slate-700">आवश्यक सेवा</label>
-                                <select id="form-service" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                                <select id="form-service" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mt-1 focus:outline-none focus:border-red-500">
                                     <option value="2D/3D Map">2D नक्शा / 3D एलिवेशन</option>
                                     <option value="Interior">लक्ज़री इंटीरियर डिज़ाइन</option>
                                     <option value="Construction">टर्नकी कंस्ट्रक्शन</option>
@@ -636,10 +640,10 @@
 
                         <div>
                             <label class="text-xs font-bold text-slate-700">संदेश या प्लॉट विवरण (वैकल्पिक)</label>
-                            <textarea id="form-message" rows="3" placeholder="प्लॉट की साइज, दिशा आदि लिखें..." class="w-full border border-slate-300 rounded-xl px-4 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange"></textarea>
+                            <textarea id="form-message" rows="3" placeholder="प्लॉट की साइज, दिशा आदि लिखें..." class="w-full border border-slate-300 rounded-xl px-4 py-2 text-sm mt-1 focus:outline-none focus:border-red-500"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orangeDark hover:from-brand-orangeDark hover:to-orange-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 transition">
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 transition">
                             <i data-lucide="send" class="w-4 h-4"></i>
                             <span>WhatsApp पर अनुरोध भेजें</span>
                         </button>
@@ -649,15 +653,17 @@
         </div>
     </section>
 
-    <!-- 9. FOOTER (LOGO ONLY) -->
-    <footer class="bg-brand-dark text-slate-400 text-xs py-12 border-t border-slate-800">
+    <!-- 9. FOOTER (MATCHING LOGO DESIGN) -->
+    <footer class="bg-[#111827] text-slate-400 text-xs py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3 text-center sm:text-left">
-                <svg class="h-12 w-auto" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 68 30 L 38 6 L 8 30 L 8 86 L 75 86" stroke="#f97316" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <text x="86" y="32" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="23" font-weight="600" letter-spacing="4">SPACE</text>
-                    <text x="84" y="67" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="34" font-weight="900" letter-spacing="2">INNOVARE</text>
-                    <text x="86" y="88" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">CRAFTING DREAM SPACES</text>
+                <svg class="h-12 w-auto" viewBox="0 0 250 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 68 38 L 44 10 L 10 38 L 10 74 Q 10 78 15 78 L 68 78" stroke="#dc2626" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <text x="76" y="34" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="28" font-weight="900" letter-spacing="2">SPACE</text>
+                    <text x="36" y="68" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="34" font-weight="900" letter-spacing="1">INNOVARE</text>
+                    <line x1="68" y1="80" x2="78" y2="80" stroke="#dc2626" stroke-width="1.5"/>
+                    <text x="82" y="82" fill="#94a3b8" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" letter-spacing="1.5">CRAFTING DREAM SPACES</text>
+                    <line x1="194" y1="80" x2="204" y2="80" stroke="#dc2626" stroke-width="1.5"/>
                 </svg>
             </div>
             <div class="text-center sm:text-right text-[11px]">
@@ -670,10 +676,10 @@
     <!-- MOBILE STICKY BOTTOM BAR -->
     <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center gap-2 md:hidden shadow-lg">
         <a href="tel:9910007412" class="flex-1 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm">
-            <i data-lucide="phone-call" class="w-4 h-4 text-brand-orange"></i>
+            <i data-lucide="phone-call" class="w-4 h-4 text-red-500"></i>
             <span>कॉल करें</span>
         </a>
-        <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20my%20house%20design" target="_blank" class="flex-1 py-2.5 rounded-xl bg-brand-orange text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-md shadow-brand-orange/30">
+        <a href="https://wa.me/919910007412?text=Hello%20Space%20INNOVARE,%20I%20want%20to%20consult%20for%20my%20house%20design" target="_blank" class="flex-1 py-2.5 rounded-xl bg-[#dc2626] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
             <span>WhatsApp</span>
         </a>
@@ -691,13 +697,13 @@
 
             <!-- STEP 1: PASSWORD AUTHENTICATION -->
             <div id="admin-auth-section">
-                <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-orange flex items-center justify-center mb-3">
+                <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-3">
                     <i data-lucide="lock" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 font-logo">एडमिन वेरिफिकेशन (Admin Login)</h3>
                 <p class="text-xs text-slate-500 mt-1 mb-4">प्रोजेक्ट्स बदलने, फोटो रिप्लेस करने या नया जोड़ने के लिए PIN दर्ज करें (Default: <strong>1234</strong>)</p>
                 
-                <input type="password" id="admin-pin" placeholder="Enter Admin PIN (1234)" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-brand-orange">
+                <input type="password" id="admin-pin" placeholder="Enter Admin PIN (1234)" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-red-500">
                 
                 <button onclick="verifyAdmin()" class="w-full bg-slate-950 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-md transition">
                     लॉगिन करें (Verify PIN)
@@ -721,13 +727,13 @@
                 <div class="space-y-3.5">
                     <div>
                         <label class="text-xs font-bold text-slate-700">प्रोजेक्ट टाइटल (Title)</label>
-                        <input type="text" id="proj-title" placeholder="जैसे: 3BHK Luxury Interior या 4K Villa Elevation" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                        <input type="text" id="proj-title" placeholder="जैसे: 3BHK Luxury Interior या 4K Villa Elevation" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-red-500">
                     </div>
 
                     <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="text-xs font-bold text-slate-700">कैटेगरी (Category)</label>
-                            <select id="proj-category" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                            <select id="proj-category" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mt-1 focus:outline-none focus:border-red-500">
                                 <option value="interior">लक्ज़री इंटीरियर</option>
                                 <option value="woodwork">डोर्स & वॉर्डरोब</option>
                                 <option value="3d">3D एलिवेशन</option>
@@ -737,7 +743,7 @@
 
                         <div>
                             <label class="text-xs font-bold text-slate-700">मीडिया प्रकार (Type)</label>
-                            <select id="proj-type" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange" onchange="toggleMediaType()">
+                            <select id="proj-type" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm mt-1 focus:outline-none focus:border-red-500" onchange="toggleMediaType()">
                                 <option value="image">फोटो (Photo)</option>
                                 <option value="video">वीडियो (YouTube Link / Shorts)</option>
                             </select>
@@ -746,22 +752,22 @@
 
                     <div>
                         <label class="text-xs font-bold text-slate-700">स्थान / लोकेशन टैग</label>
-                        <input type="text" id="proj-location" placeholder="जैसे: Saras Circle, Bharatpur" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                        <input type="text" id="proj-location" placeholder="जैसे: Saras Circle, Bharatpur" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-red-500">
                     </div>
 
                     <!-- Direct Device File Upload (With Auto Compression) -->
-                    <div id="file-upload-box" class="p-3 bg-orange-50/60 rounded-2xl border border-orange-200">
-                        <label class="text-xs font-bold text-brand-orangeDark block mb-1 flex items-center gap-1.5">
+                    <div id="file-upload-box" class="p-3 bg-red-50/60 rounded-2xl border border-red-200">
+                        <label class="text-xs font-bold text-red-700 block mb-1 flex items-center gap-1.5">
                             <i data-lucide="upload" class="w-3.5 h-3.5"></i>
                             <span>फोन / कंप्यूटर से फोटो चुनें (Auto-Compress & Fast)</span>
                         </label>
-                        <input type="file" id="proj-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-brand-orange file:text-white hover:file:bg-brand-orangeDark cursor-pointer" onchange="handleFileUpload(event)">
+                        <input type="file" id="proj-file" accept="image/*" class="w-full text-xs text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-red-600 file:text-white hover:file:bg-red-700 cursor-pointer" onchange="handleFileUpload(event)">
                         <span class="text-[10px] text-slate-500 block mt-1">✓ फोन कैमरे की भारी फोटो भी 1 सेकंड में लोड हो जाएगी</span>
                     </div>
 
                     <div>
                         <label class="text-xs font-bold text-slate-700" id="url-label">या इमेज / यूट्यूब वीडियो URL पेस्ट करें</label>
-                        <input type="text" id="proj-url" oninput="updateLiveMediaPreview()" placeholder="https://... या YouTube Link" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-brand-orange">
+                        <input type="text" id="proj-url" oninput="updateLiveMediaPreview()" placeholder="https://... या YouTube Link" class="w-full border border-slate-300 rounded-xl px-3.5 py-2 text-sm mt-1 focus:outline-none focus:border-red-500">
                     </div>
 
                     <!-- LIVE PREVIEW BOX -->
@@ -1032,12 +1038,12 @@
                         ${mediaHtml}
                         <div class="p-5">
                             <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1">
-                                <span class="flex items-center gap-1 font-semibold text-brand-orangeDark">
+                                <span class="flex items-center gap-1 font-semibold text-red-600">
                                     <i data-lucide="map-pin" class="w-3 h-3"></i> ${p.location || 'Bharatpur • Jaipur • Noida'}
                                 </span>
                                 <span class="uppercase font-bold">${p.type === 'video' ? 'Video Tour' : 'HD Photo'}</span>
                             </div>
-                            <h4 class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-brand-orange transition line-clamp-2">${p.title}</h4>
+                            <h4 class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-red-600 transition line-clamp-2">${p.title}</h4>
                             ${adminControls}
                         </div>
                     </div>
@@ -1054,7 +1060,7 @@
             document.querySelectorAll(".gallery-tab").forEach(tab => {
                 tab.className = "gallery-tab shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-white border border-slate-300 text-slate-700 hover:border-slate-400 transition";
             });
-            btn.className = "gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-brand-dark text-white shadow-sm transition";
+            btn.className = "gallery-tab active shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-white shadow-sm transition";
             renderGallery();
         }
 
